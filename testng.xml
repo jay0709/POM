@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.owners.Sanity.SaveFavouriteProperty"/>
+      <class name="com.owners.Sanity.UserRegistration"/>
+      <class name="com.owners.Sanity.SanitySuite"/>
+      <class name="com.owners.Sanity.PdpComponents"/>
+      <class name="com.owners.FavouriteTab.FavouriteTab_Automation"/>
+      <class name="com.owners.Sanity.DiscoverTabComponents"/>
+      <class name="com.owners.Sanity.SearchFilters"/>
+      <class name="com.owners.OpenHouse.OpenHouseInSRP"/>
+      <class name="com.owners.PDP.PDP_Automation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

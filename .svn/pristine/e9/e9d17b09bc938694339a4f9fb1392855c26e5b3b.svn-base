@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">17</td><td class="num">0</td><td class="num attn">3</td><td class="num">1,226,065</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.owners.FavouriteTab.FavouriteTab_Automation</td><td><a href="#m0">swipePhotosInFavouriteTab</a></td><td rowspan="1">1511437646296</td><td rowspan="1">10527</td></tr><tr class="failedeven"><td><a href="#m1">verifyAssetInFavTab</a></td><td rowspan="1">1511437914988</td><td rowspan="1">110957</td></tr><tr class="failedeven"><td><a href="#m2">verifyAssetInPDPGallery</a></td><td rowspan="1">1511437792600</td><td rowspan="1">121705</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="17">com.owners.FavouriteTab.FavouriteTab_Automation</td><td><a href="#m3">addCommentAndVerify</a></td><td rowspan="1">1511437345717</td><td rowspan="1">58044</td></tr><tr class="passedeven"><td><a href="#m4">addImageAndTextFromCamera</a></td><td rowspan="1">1511437483369</td><td rowspan="1">73648</td></tr><tr class="passedeven"><td><a href="#m5">addImageAndTextFromGallery</a></td><td rowspan="1">1511437557019</td><td rowspan="1">85484</td></tr><tr class="passedeven"><td><a href="#m6">addMultilineCommentVerify</a></td><td rowspan="1">1511437739871</td><td rowspan="1">52728</td></tr><tr class="passedeven"><td><a href="#m7">checkKeyboardWhenScroll</a></td><td rowspan="1">1511438026543</td><td rowspan="1">29907</td></tr><tr class="passedeven"><td><a href="#m8">checkNoFavourites</a></td><td rowspan="1">1511437295053</td><td rowspan="1">50660</td></tr><tr class="passedeven"><td><a href="#m9">deleteImageOnlyFromAsset</a></td><td rowspan="1">1511437642504</td><td rowspan="1">3790</td></tr><tr class="passedeven"><td><a href="#m10">deleteNotesFromFavTabProperty</a></td><td rowspan="1">1511437442491</td><td rowspan="1">40876</td></tr><tr class="passedeven"><td><a href="#m11">editCommentInFavTab</a></td><td rowspan="1">1511437403763</td><td rowspan="1">38727</td></tr><tr class="passedeven"><td><a href="#m12">favouritePropertyFromQuickView</a></td><td rowspan="1">1511437657416</td><td rowspan="1">82453</td></tr><tr class="passedeven"><td><a href="#m13">verifyAvailableTimes</a></td><td rowspan="1">1511438122500</td><td rowspan="1">1532</td></tr><tr class="passedeven"><td><a href="#m14">verifyMultipleCommentAdd</a></td><td rowspan="1">1511438239361</td><td rowspan="1">220627</td></tr><tr class="passedeven"><td><a href="#m15">verifyNoSchduleTourForFSBO</a></td><td rowspan="1">1511438196277</td><td rowspan="1">43083</td></tr><tr class="passedeven"><td><a href="#m16">verifyScheuleTourInFavTab</a></td><td rowspan="1">1511438114302</td><td rowspan="1">8197</td></tr><tr class="passedeven"><td><a href="#m17">verifySwipeImages</a></td><td rowspan="1">1511438459989</td><td rowspan="1">26501</td></tr><tr class="passedeven"><td><a href="#m18">verifyToastMessageAfterfavorite</a></td><td rowspan="1">1511438056451</td><td rowspan="1">57850</td></tr><tr class="passedeven"><td><a href="#m19">verifyUserDetails</a></td><td rowspan="1">1511438124033</td><td rowspan="1">72243</td></tr></tbody>
+</table>
+<h2>Default test</h2><h3 id="m0">com.owners.FavouriteTab.FavouriteTab_Automation#swipePhotosInFavouriteTab</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 138 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 4135a154-9b74-495c-8de2-15ef7d68a48c
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@index =&apos;0&apos;]}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.favourites.PageFactory.FavoritesTab_PO.swipePhotosInFavourite(FavoritesTab_PO.java:165)
+	at com.favourites.PageFactory.FavoritesTab_PO.countImagesWhileSwipe(FavoritesTab_PO.java:190)
+	at com.owners.FavouriteTab.FavouriteTab_Automation.swipePhotosInFavouriteTab(FavouriteTab_Automation.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.owners.FavouriteTab.FavouriteTab_Automation#verifyAssetInFavTab</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 133 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 4135a154-9b74-495c-8de2-15ef7d68a48c
+*** Element info: {Using=id, value=com.owners.buyer:id/property_comment_text_view}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.favourites.PageFactory.AddAssetForPDP.addAssetToViewInFavTab(AddAssetForPDP.java:155)
+	at com.owners.FavouriteTab.FavouriteTab_Automation.verifyAssetInFavTab(FavouriteTab_Automation.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.owners.FavouriteTab.FavouriteTab_Automation#verifyAssetInPDPGallery</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 137 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 4135a154-9b74-495c-8de2-15ef7d68a48c
+*** Element info: {Using=id, value=com.owners.buyer:id/property_comment_text_view}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.favourites.PageFactory.AddAssetForPDP.addImageToViewInPDP(AddAssetForPDP.java:97)
+	at com.owners.FavouriteTab.FavouriteTab_Automation.verifyAssetInPDPGallery(FavouriteTab_Automation.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.owners.FavouriteTab.FavouriteTab_Automation#addCommentAndVerify</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.owners.FavouriteTab.FavouriteTab_Automation#addImageAndTextFromCamera</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.owners.FavouriteTab.FavouriteTab_Automation#addImageAndTextFromGallery</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.owners.FavouriteTab.FavouriteTab_Automation#addMultilineCommentVerify</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.owners.FavouriteTab.FavouriteTab_Automation#checkKeyboardWhenScroll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.owners.FavouriteTab.FavouriteTab_Automation#checkNoFavourites</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.owners.FavouriteTab.FavouriteTab_Automation#deleteImageOnlyFromAsset</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.owners.FavouriteTab.FavouriteTab_Automation#deleteNotesFromFavTabProperty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.owners.FavouriteTab.FavouriteTab_Automation#editCommentInFavTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.owners.FavouriteTab.FavouriteTab_Automation#favouritePropertyFromQuickView</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">com.owners.FavouriteTab.FavouriteTab_Automation#verifyAvailableTimes</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">com.owners.FavouriteTab.FavouriteTab_Automation#verifyMultipleCommentAdd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">com.owners.FavouriteTab.FavouriteTab_Automation#verifyNoSchduleTourForFSBO</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">com.owners.FavouriteTab.FavouriteTab_Automation#verifyScheuleTourInFavTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">com.owners.FavouriteTab.FavouriteTab_Automation#verifySwipeImages</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">com.owners.FavouriteTab.FavouriteTab_Automation#verifyToastMessageAfterfavorite</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">com.owners.FavouriteTab.FavouriteTab_Automation#verifyUserDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

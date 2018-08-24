@@ -1,0 +1,48 @@
+<h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>Default suite</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table border="1">
+<tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:52:02</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.addCommentAndVerify()[pri:2, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">addCommentAndVerify</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:54:17</td>   <td>135048</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.addImageAndTextFromCamera()[pri:5, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">addImageAndTextFromCamera</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:55:37</td>   <td>214931</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.addImageAndTextFromGallery()[pri:6, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">addImageAndTextFromGallery</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:59:17</td>   <td>434979</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.addMultilineCommentVerify()[pri:10, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">addMultilineCommentVerify</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:07:53</td>   <td>951065</td> <td>&nbsp;</td><td title="&lt;&lt;FavouriteTab_Automation.afterTest()[pri:0, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">&lt;&lt;afterTest</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:51:11</td>   <td>-51135</td> <td>&nbsp;</td><td title="&gt;&gt;FavouriteTab_Automation.beforeTest()[pri:0, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">&gt;&gt;beforeTest</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:00:50</td>   <td>528045</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.checkKeyboardWhenScroll()[pri:13, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">checkKeyboardWhenScroll</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:51:19</td>   <td>-42842</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.checkNoFavourites()[pri:1, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">checkNoFavourites</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:57:17</td>   <td>314867</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.deleteImageOnlyFromAsset()[pri:7, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">deleteImageOnlyFromAsset</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:53:41</td>   <td>98741</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.deleteNotesFromFavTabProperty()[pri:4, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">deleteNotesFromFavTabProperty</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:53:03</td>   <td>61053</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.editCommentInFavTab()[pri:3, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">editCommentInFavTab</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:57:30</td>   <td>327711</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.favouritePropertyFromQuickView()[pri:9, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">favouritePropertyFromQuickView</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 14:57:17</td>   <td>314949</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.swipePhotosInFavouriteTab()[pri:8, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">swipePhotosInFavouriteTab</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:00:35</td>   <td>513157</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyAssetInFavTab()[pri:12, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyAssetInFavTab</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:00:09</td>   <td>487651</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyAssetInPDPGallery()[pri:11, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyAssetInPDPGallery</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:02:28</td>   <td>626077</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyAvailableTimes()[pri:16, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyAvailableTimes</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:04:39</td>   <td>756832</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyMultipleCommentAdd()[pri:19, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyMultipleCommentAdd</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:03:55</td>   <td>713510</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyNoSchduleTourForFSBO()[pri:18, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyNoSchduleTourForFSBO</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:02:19</td>   <td>616835</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyScheuleTourInFavTab()[pri:15, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyScheuleTourInFavTab</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:07:20</td>   <td>918407</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifySwipeImages()[pri:20, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifySwipeImages</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:01:22</td>   <td>559721</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyToastMessageAfterfavorite()[pri:14, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyToastMessageAfterfavorite</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+<tr bgcolor="8f8f71">  <td>17/11/22 15:02:42</td>   <td>640202</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FavouriteTab_Automation.verifyUserDetails()[pri:17, instance:com.owners.FavouriteTab.FavouriteTab_Automation@3108bc]">verifyUserDetails</td> 
+  <td>main@982007015</td>   <td></td> </tr>
+</table>

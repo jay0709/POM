@@ -1,0 +1,242 @@
+package com.favourites.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class FavoritesTab_PO {
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+	FavTabID_PO ft = new FavTabID_PO();
+
+	public void loginFromFavTab(AndroidDriver<AndroidElement> driver) {
+		cf.relaunchApp(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		driver.findElement(ft.clickFavouriteTab).click();
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(reg.onboarding_SignInBtn));
+			// Enter email ID
+			driver.findElement(reg.onboarding_RegnEmail).click();
+			driver.findElement(reg.onboarding_RegnEmail).sendKeys(pr.email1);
+			System.out.println("Entered the email ID: " + pr.email1);
+
+			// Enter PWD
+			driver.hideKeyboard();
+			driver.findElement(reg.onboarding_RegnPassword).sendKeys(pr.password);
+			System.out.println("Entered the password: " + pr.password);
+
+			// Click on SignIn Button
+			driver.hideKeyboard();
+			driver.findElement(reg.onboarding_SignInBtn).click();
+			System.out.println("Clicked on Sign In Button");
+
+		} catch (Exception e) {
+			System.out.println("User is already signed in..!");
+		}
+
+	}
+
+	public void checkNoSavedListingsText(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		Thread.sleep(5000);
+		driver.findElement(ft.clickFavouriteTab).click();
+		try {
+			while (driver.findElement(ft.favIcon).isEnabled()) {
+				driver.findElement(ft.favIcon).click();
+			}
+		} catch (Exception e) {
+			System.out.println(driver.findElement(ft.noFavProperties).getText() + " : No Fav properties Text Verified");
+			System.out.println(driver.findElement(ft.emptyMessage).getText() + " : Empty message text verified");
+		}
+		System.out.println("No favorites properties are present in the Fav Tab..!");
+		Thread.sleep(5000);
+	}
+
+	public void checkKeyboarPresent(AndroidDriver<AndroidElement> driver) {
+		try {
+			driver.hideKeyboard();
+		} catch (Exception ex) {
+			System.out.println("Keyboard hidden..!");
+		}
+	}
+
+	public void addTextInFavTab(AndroidDriver<AndroidElement> driver, String textToEnter) throws InterruptedException {
+		driver.findElement(ft.clickFavouriteTab).click();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		Thread.sleep(2000);
+		driver.findElement(ft.editTextField).click();
+		confirmDisclaimer(driver);
+		driver.findElement(ft.editTextField).sendKeys(textToEnter);
+		driver.hideKeyboard();
+		String[] chars = driver.findElement(ft.remainingChars).getText().split("/");
+		String maxLimit = chars[1];
+		System.out.println("Max limit of enetering characters: " + maxLimit);
+		System.out.println("Total characters entered: " + chars[0]);
+		driver.findElement(ft.saveAssetButton).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(ft.sendTextProgressBar));
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(ft.commentTextView));
+		} catch (Exception e) {
+			System.out.println("Comment added but not relfected in the view..");
+		}
+		System.out.println("Asset addition completed..");
+	}
+
+	public void confirmDisclaimer(AndroidDriver<AndroidElement> driver) {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		// cf.relaunchApp(driver);
+		// driver.findElement(ft.clickFavouriteTab).click();
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(ft.confirmDisclaimerFirstTime));
+			System.out.println("Disclaimer page is shown..!");
+			System.out
+					.println(driver.findElement(ft.privateNoteDescription).getText() + " : Description Text verified");
+			driver.findElement(ft.disclaimerAcceptButton).click();
+			System.out.println("OK Button clicked -> Navigated to Fav tab.");
+		} catch (Exception e) {
+			System.out.println("Disclaimer page is not opened as user navigated to this page earlier as well..!");
+		}
+
+	}
+
+	public void latestCommentVerify(AndroidDriver<AndroidElement> driver, String assetToAdd)
+			throws InterruptedException {
+		addTextInFavTab(driver, assetToAdd);
+		Thread.sleep(2000);
+		System.out.println("Asset author initials are: " + driver.findElement(ft.commentAuthorInitials).getText());
+		String lastComment = driver.findElement(ft.commentTextView).getText().trim().substring(12);
+		System.out.println(
+				"Asset added time is: " + driver.findElement(ft.commentTextView).getText().trim().substring(4, 10));
+		Assert.assertEquals(assetToAdd.trim(), lastComment.trim(), "Last comment does not match with the commet added");
+	}
+
+	public void verifyLoginBeforeSaveListing(AndroidDriver<AndroidElement> driver) {
+		driver.findElement(ft.favPropertyList).click();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(reg.onboarding_SignInBtn));
+			// Enter email ID
+			driver.findElement(reg.onboarding_RegnEmail).click();
+			driver.findElement(reg.onboarding_RegnEmail).sendKeys(pr.email1);
+			System.out.println("Entered the email ID: " + pr.email1);
+
+			// Enter PWD
+			driver.hideKeyboard();
+			driver.findElement(reg.onboarding_RegnPassword).sendKeys(pr.password);
+			System.out.println("Entered the password: " + pr.password);
+
+			// Click on SignIn Button
+			// driver.hideKeyboard();
+			driver.findElement(reg.onboarding_SignInBtn).click();
+			System.out.println("Clicked on Sign In Button");
+
+		} catch (Exception e) {
+			System.out.println("User is Signed in..!");
+		}
+
+		try {
+			wait.until(ExpectedConditions.presenceOfElementLocated(ft.coShopAlertTitle));
+			System.out.println(driver.findElement(ft.coShopAlertTitle).getText());
+			System.out.println(driver.findElement(ft.alertTittleMessage).getText());
+			driver.findElement(ft.doNotAskAgain).click();
+			driver.findElement(ft.notNowButton).click();
+		} catch (Exception e) {
+			System.out.println("No co-shop alert is visible..!");
+		}
+	}
+
+	public void swipePhotosInFavourite(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		// TouchAction ta = new TouchAction(driver);
+		int xcoOrdinate = driver.findElement(ft.imageContainerInFav).getCenter().getX();
+		int ycoOrdinate = driver.findElement(ft.imageContainerInFav).getCenter().getY();
+		Dimension size = driver.findElement(ft.imageContainerInFav).getSize();
+		int length = size.getWidth();
+		int xcoOrdinateStart = xcoOrdinate + length / 4;
+		int xcoOrdinateEnd = xcoOrdinate - length / 4;
+		// System.out.println(length + " :: " + xcoOrdinateEnd + " :: " +
+		// xcoOrdinateStart + " :: " + ycoOrdinate);
+		new TouchAction(driver).press(xcoOrdinateStart, ycoOrdinate).waitAction().moveTo(xcoOrdinateEnd, ycoOrdinate)
+				.release().perform();
+	}
+
+	public void countImagesWhileSwipe(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(ft.clickFavouriteTab));
+		driver.findElement(ft.clickFavouriteTab).click();
+		Thread.sleep(3000);
+		swipePhotosInFavourite(driver);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ft.imageConatinerPhotoCount));
+		String currentImageNo = driver.findElement(ft.imageConatinerPhotoCount).getText().split("/")[0];
+		String totalImageCount = driver.findElement(ft.imageConatinerPhotoCount).getText().split("/")[1];
+		if (Integer.parseInt(currentImageNo) > 1) {
+			System.out.println("Image swiped to image :" + Integer.parseInt(currentImageNo));
+			System.out.println("Total Image count..: " + totalImageCount);
+			swipePhotosInFavourite(driver);
+			swipePhotosInFavourite(driver);
+			swipePhotosInFavourite(driver);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(ft.favPropertyAddress));
+		} else
+			System.out.println("Single image is available in the property.");
+
+	}
+
+	public void favPropertyFromMap(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+
+		wait = new WebDriverWait(driver, 20);
+		cf.relaunchApp(driver);
+		checkNoSavedListingsText(driver);
+		cf.searchMapSRP("Marietta,GA", driver);
+		cf.fromClusterToPinView(driver);
+		driver.findElement(ft.favIconInQuickSRP).click();
+		String qPrice = driver.findElement(ft.quickViewPrice).getText();
+		String qBedBath = driver.findElement(ft.bedBathSqFtQuickView).getText();
+		String qAddress = driver.findElement(ft.addressQuickView).getText();
+		wait.until(ExpectedConditions.elementSelectionStateToBe(ft.favIconInQuickSRP, true));
+		if (driver.findElement(ft.favIconInQuickSRP).isSelected()) {
+			System.out.println("Property has been favorited from Quick SRP..!");
+			Thread.sleep(5000);
+			driver.findElement(ft.clickFavouriteTab).click();
+			Assert.assertEquals(qPrice, driver.findElement(ft.favPropertyPrice).getText(),
+					"Property Price not matching..!");
+			System.out.println("Property Price matched as: " + qPrice);
+			Assert.assertEquals(qBedBath, driver.findElement(ft.favPropertyDetails).getText(),
+					"Property Details not matching..!");
+			System.out.println("Property details matched as: " + qBedBath);
+			Assert.assertEquals(qAddress, driver.findElement(ft.favPropertyAddress).getText(),
+					"Property Address not matching..!");
+			System.out.println("Property address matched as: " + qAddress);
+		}
+
+	}
+
+	public void checkKeyboardVisible(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		cf.relaunchApp(driver);
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(ft.clickFavouriteTab));
+		driver.findElement(ft.clickFavouriteTab).click();
+		driver.findElement(ft.editTextField).click();
+		Thread.sleep(2000);
+		checkKeyboarPresent(driver);
+		driver.findElement(ft.editTextField).click();
+		Thread.sleep(2000);
+		cf.verticalScrollDownwrds(driver);
+		checkKeyboarPresent(driver);
+	}
+
+}

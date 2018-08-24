@@ -1,0 +1,28 @@
+<h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>Failed suite [Failed suite [Default suite]]</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table border="1">
+<tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:05:06</td>   <td>0</td> <td>&nbsp;</td><td title="&lt;&lt;OpenHouseInSRP.afterTest()[pri:0, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">&lt;&lt;afterTest</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:02:50</td>   <td>-135629</td> <td>&nbsp;</td><td title="&gt;&gt;OpenHouseInSRP.beforeTest()[pri:0, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">&gt;&gt;beforeTest</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:02:57</td>   <td>-128436</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.discoverPageOpenHose()[pri:10, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">discoverPageOpenHose</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:05:06</td>   <td>-46</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.matchDataInPDPWithDiscovertab()[pri:16, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">matchDataInPDPWithDiscovertab</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:03:35</td>   <td>-90954</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.newTagWithOpenHouseQuickSRP()[pri:13, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">newTagWithOpenHouseQuickSRP</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:04:50</td>   <td>-15797</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.searchStateNotChanged()[pri:14, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">searchStateNotChanged</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:03:34</td>   <td>-91771</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.swipeViewOpenHouse()[pri:11, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">swipeViewOpenHouse</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:05:06</td>   <td>-58</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.tagAndTimeVerifyInDiscover()[pri:15, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">tagAndTimeVerifyInDiscover</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:05:06</td>   <td>-12</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.unauthenticatedUserOpenHouseVerify()[pri:21, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">unauthenticatedUserOpenHouseVerify</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:05:06</td>   <td>-23</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.updateOpenHouseListInDiscoverTab()[pri:19, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">updateOpenHouseListInDiscoverTab</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:05:06</td>   <td>-31</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.verifyFavIconDisappear()[pri:18, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">verifyFavIconDisappear</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+<tr bgcolor="7fa893">  <td>17/11/06 15:05:06</td>   <td>-38</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="OpenHouseInSRP.verifyFavIconInTiles()[pri:17, instance:com.owners.OpenHouse.OpenHouseInSRP@617faa95]">verifyFavIconInTiles</td> 
+  <td>main@1335298403</td>   <td></td> </tr>
+</table>

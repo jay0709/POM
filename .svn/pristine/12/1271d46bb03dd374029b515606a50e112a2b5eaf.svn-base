@@ -1,0 +1,108 @@
+/**
+ * @author Jayabrata
+ *
+ */
+package com.owners.FavouriteTab;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.favourites.PageFactory.EditDeleteAssest_PO;
+import com.favourites.PageFactory.FavTabID_PO;
+import com.favourites.PageFactory.FavoritesTab_PO;
+import com.owners.commonFunctions;
+import com.owners.desiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class FavouriteTab_Automation {
+	desiredCapabilities dc = new desiredCapabilities();
+	AndroidDriver<AndroidElement> driver;
+	WebDriverWait wait;
+	FavTabID_PO ftid = new FavTabID_PO();
+	FavoritesTab_PO ft = new FavoritesTab_PO();
+	commonFunctions cf = new commonFunctions();
+	EditDeleteAssest_PO ed = new EditDeleteAssest_PO();
+
+	@BeforeTest
+	public void beforeTest() throws MalformedURLException, InterruptedException {
+		ft = new FavoritesTab_PO();
+		dc.forAndroidTab();
+		driver = dc.getAndroidDriver();
+		wait = dc.getWebDriverWait();
+		System.out.println("###########################\n Starting Execuiton\n###########################");
+	}
+
+	// @Test(priority = 1)
+	// public void checkNoFavourites() throws InterruptedException {
+	// ft.loginFromFavTab(driver);
+	// ft.checkNoSavedListingsText(driver);
+	// System.out.println("===========================\n PASSED TEST CASE: 1
+	// \n===========================\n");
+	// }
+	//
+	// @Test(priority = 2)
+	// public void addCommentAndVerify() throws InterruptedException,
+	// MalformedURLException {
+	// String newAsset = "1234567890..!@#..abcdEFGH";
+	// cf.searchMapSRP("Concord,CA", driver);
+	// Thread.sleep(2000);
+	// driver.findElement(ftid.listSRPTab).click();
+	// Thread.sleep(2000);
+	// cf.verticalScrollUpwards(driver);
+	// ft.verifyLoginBeforeSaveListing(driver);
+	// Thread.sleep(5000);
+	// ft.latestCommentVerify(driver, newAsset);
+	// System.out.println("===========================\n PASSED TEST CASE: 2
+	// \n===========================\n");
+	// }
+	//
+	// @Test(priority = 3)
+	// public void editCommentInFavTab() throws InterruptedException {
+	// Thread.sleep(2000);
+	// driver.findElement(ftid.clickFavouriteTab).click();
+	// ed.editCommentFromFavTab(driver, "NEW text 123");
+	// System.out.println("===========================\n PASSED TEST CASE: 3
+	// \n===========================\n");
+	// }
+	//
+	// @Test(priority = 4)
+	// public void deleteNotesFromFavTabProperty() throws InterruptedException {
+	// ed.deleteCommentsFromProperty(driver);
+	// System.out.println("===========================\n PASSED TEST CASE: 4
+	// \n===========================\n");
+	// }
+	//
+	// @Test(priority = 5)
+	// public void addImageAndTextFromCamera() throws InterruptedException {
+	// ed.addImageAssetFromCamera(driver);
+	// System.out.println("===========================\n PASSED TEST CASE: 5
+	// \n===========================\n");
+	// }
+
+	@Test(priority = 6)
+	public void addImageAndTextFromGallery() throws InterruptedException {
+		ed.addImageFromGallery(driver);
+		ed.deleteImageFromAsset(driver);
+		System.out.println("===========================\n PASSED TEST CASE: 6 \n===========================\n");
+	}
+
+	@Test(priority = 7)
+	public void deleteImageOnlyFromAsset() throws InterruptedException {
+		ed.deleteImageFromAsset(driver);
+		System.out.println("===========================\n PASSED TEST CASE: 7 \n===========================\n");
+	}
+
+	@AfterTest
+	public void afterTest() {
+		driver.removeApp("io.appium.settings");
+		driver.removeApp("io.appium.unlock");
+		driver.quit();
+		System.out.print("\n***************************\n EXECUTION COMPLETE \n***************************\n");
+	}
+}

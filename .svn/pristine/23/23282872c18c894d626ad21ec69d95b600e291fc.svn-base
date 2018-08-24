@@ -1,0 +1,196 @@
+package com.openhouse.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.Connection;
+
+public class OpenHouseMenu_PO {
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+
+	public By onboarding_RegnMeBtn = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[5]//android.widget.LinearLayout/android.widget.TextView");
+	public By openHouseInMe = By.xpath("//*[contains(@text,'My Open Houses')]");
+	public By navigatingSearchTab = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[1]//android.widget.LinearLayout[1]");
+
+	public By myOpenHouseTime = By.id("com.owners.buyer:id/time");
+	public By myOpenHouseMenu = By.id("com.owners.buyer:id/menu");
+	public By addressLineOne = By.id("com.owners.buyer:id/property_address_line1");
+	public By addressLineTwo = By.id("com.owners.buyer:id/property_address_line2");
+	public By openHouseHeaderTime = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By favIconInPDP = By.id("com.owners.buyer:id/property_details_favourite_fab");
+
+	public By savedOpenHouse = By.id("com.owners.buyer:id/tv_open_house_saved_info");
+	public By openHouseTabVerify = By.xpath("//*[contains(@text, 'My Open Houses')]");
+	public By menuAddress = By.id("com.owners.buyer:id/openhouse_actions_address");
+	public By menuPropertydetails = By.id("com.owners.buyer:id/openhouse_actions_property_details");
+	public By menuRequestTour = By.id("com.owners.buyer:id/openhouse_actions_request_tour");
+	public By menuCopyAddress = By.id("com.owners.buyer:id/openhouse_actions_copy_address");
+	public By menuGetDirections = By.id("com.owners.buyer:id/openhouse_actions_get_directions");
+	public By menuAddCalenderEvent = By.id("com.owners.buyer:id/openhouse_actions_add_calendar_event");
+	public By menuDeleteOpenHouse = By.id("com.owners.buyer:id/openhouse_actions_delete");
+
+	public By deleteDialouge = By.id("android:id/message");
+	public By deleteConfirmationOK = By.id("android:id/button1");
+
+	public By noSavedOpenHouse = By.xpath("//*[contains(@text,'No Saved Open Houses')]");
+	public By rqstTourHeader = By.id("com.owners.buyer:id/tour_date_title_text_view");
+	public By mapNavigation = By.id("com.google.android.apps.maps:id/home_bottom_sheet_container");
+	public By calenderNaviagtion = By.id("com.google.android.calendar:id/title_edit_text");
+	public By calendarStartDate = By.id("com.google.android.calendar:id/first_line_text");
+	public By calendarStartTime = By.id("com.google.android.calendar:id/right_action");
+	public By errorText = By.id("com.owners.buyer:id/open_house_error_text_view");
+
+	public void clickMenuInOpenHouse(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(navigatingSearchTab));
+		driver.findElement(onboarding_RegnMeBtn).click();
+		Thread.sleep(3000);
+
+		// Opening the Open house section
+		driver.findElement(openHouseInMe).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myOpenHouseMenu));
+		driver.findElement(myOpenHouseMenu).click();
+	}
+
+	public void menuAddressVerify(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(navigatingSearchTab));
+		driver.findElement(onboarding_RegnMeBtn).click();
+		Thread.sleep(3000);
+		driver.findElement(openHouseInMe).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myOpenHouseMenu));
+
+		// Getting the address of the open house
+		String time = driver.findElement(myOpenHouseTime).getText();
+		System.out.println("Open house time is: " + time);
+		String addressMyOpenHouse = driver.findElement(addressLineOne).getText() + ", "
+				+ driver.findElement(addressLineTwo).getText();
+		driver.findElement(myOpenHouseMenu).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(menuAddress));
+
+		// Verifying the menu address
+		Assert.assertEquals(addressMyOpenHouse, driver.findElement(menuAddress).getText(),
+				"Open house addess Mismatch..!");
+		System.out.println("Open house address verified as: " + addressMyOpenHouse);
+	}
+
+	public void viewPDPFromOpenHouse(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		// clickMenuInOpenHouse(driver);
+		wait = new WebDriverWait(driver, 10);
+		// wait.until(ExpectedConditions.elementToBeClickable(navigatingSearchTab));
+		// driver.findElement(onboarding_RegnMeBtn).click();
+		// Thread.sleep(3000);
+		// driver.findElement(openHouseInMe).click();
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(myOpenHouseMenu));
+		// driver.findElement(myOpenHouseMenu).click();
+		Assert.assertEquals(driver.findElement(menuCopyAddress).getText(), "Copy Address",
+				"Copy Address text not present..!");
+
+		// Navigation to PDP
+		driver.findElement(menuPropertydetails).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(openHouseHeaderTime));
+		if (driver.findElement(favIconInPDP).isSelected()) {
+			driver.findElement(favIconInPDP).click();
+		}
+		System.out.println("User is navigated to PDP from Open house..");
+		cf.scrollToText("Next Steps", driver);
+		System.out.println("Property is saved as open house --> verifed from ME section..!");
+	}
+
+	public void deleteOpenHouse(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		wait = new WebDriverWait(driver, 10);
+		clickMenuInOpenHouse(driver);
+
+		// Delete the Open house
+		driver.findElement(menuDeleteOpenHouse).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(deleteDialouge));
+		Assert.assertEquals(driver.findElement(deleteDialouge).getText(), "Delete this Open House?",
+				"Confirmation dialouge is not visible..!");
+		System.out.println("Confirmation before delete --> " + driver.findElement(deleteDialouge).getText());
+		driver.findElement(deleteConfirmationOK).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(noSavedOpenHouse));
+		Assert.assertEquals(driver.findElement(noSavedOpenHouse).getText(), "No Saved Open Houses",
+				"All open house not cleared");
+		System.out.println("No saved open house available..!");
+	}
+
+	public void scheduleTourOpenHouse(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		wait = new WebDriverWait(driver, 10);
+		clickMenuInOpenHouse(driver);
+
+		// navigation to Request A Tour section
+		driver.findElement(menuRequestTour).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(rqstTourHeader));
+		Assert.assertEquals(driver.findElement(rqstTourHeader).getText(), "Request a Tour",
+				"Request a Tour section is not opened");
+		System.out.println("User is naviagted to Request a Tour section..!");
+	}
+
+	public void getDirectionsFromOpenHosuse(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		wait = new WebDriverWait(driver, 15);
+		clickMenuInOpenHouse(driver);
+
+		// Navigation to Maps
+		driver.findElement(menuGetDirections).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mapNavigation));
+		System.out.println("User is navigated to Maps..!");
+	}
+
+	public void navigateToCreateEvent(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(onboarding_RegnMeBtn));
+		driver.findElement(onboarding_RegnMeBtn).click();
+		Thread.sleep(3000);
+		driver.findElement(openHouseInMe).click();
+
+		// Verifying the address of the open house in Caledar event.
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myOpenHouseMenu));
+		String addressMyOpenHouse = driver.findElement(addressLineOne).getText() + ", "
+				+ driver.findElement(addressLineTwo).getText();
+		driver.findElement(myOpenHouseMenu).click();
+		driver.findElement(menuAddCalenderEvent).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(calenderNaviagtion));
+		Assert.assertEquals(driver.findElement(calenderNaviagtion).getText(), "Open House",
+				"User is not navigated to Calendar");
+		System.out.println("Open house Date Verified as: " + driver.findElement(calendarStartDate).getText());
+		System.out.println("Open house Start Time Verified as: " + driver.findElement(calendarStartTime).getText());
+
+	}
+
+	public void myOpenHouseInNoNetwork(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		driver.setConnection(Connection.AIRPLANE);
+		cf.relaunchApp(driver);
+		driver.findElement(onboarding_RegnMeBtn).click();
+		Thread.sleep(3000);
+		driver.findElement(openHouseInMe).click();
+		String errorNoNetwork = driver.findElement(errorText).getText();
+		Assert.assertEquals(errorNoNetwork, "An error has occurred, please try again later.",
+				"Test Case failed due to network issue..!");
+		System.out.println(errorNoNetwork);
+		driver.setConnection(Connection.ALL);
+		driver.closeApp();
+	}
+
+}

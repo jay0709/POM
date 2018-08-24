@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="120899" started-at="2017-12-28T10:57:08Z" finished-at="2017-12-28T10:59:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="120899" started-at="2017-12-28T10:57:08Z" finished-at="2017-12-28T10:59:08Z">
+      <class name="com.owners.Sanity.SanitySuite">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.owners.Sanity.SanitySuite@4fb64261]" name="beforeTest" is-config="true" duration-ms="6377" started-at="2017-12-28T16:27:08Z" finished-at="2017-12-28T16:27:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="SearchFilterValidation()[pri:9, instance:com.owners.Sanity.SanitySuite@4fb64261]" name="SearchFilterValidation" duration-ms="110686" started-at="2017-12-28T16:27:14Z" finished-at="2017-12-28T16:29:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchFilterValidation -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.owners.Sanity.SanitySuite@4fb64261]" name="afterTest" is-config="true" duration-ms="3817" started-at="2017-12-28T16:29:05Z" finished-at="2017-12-28T16:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.owners.Sanity.SanitySuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

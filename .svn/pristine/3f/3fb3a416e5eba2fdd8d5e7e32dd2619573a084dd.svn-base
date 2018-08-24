@@ -1,0 +1,14 @@
+<h2>Methods that were not run</h2><table>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.swipePhotosInFavouriteTab</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.addCommentAndVerify</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.deleteImageOnlyFromAsset</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.checkNoFavourites</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.checkKeyboardWhenScroll</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.verifyAssetInFavTab</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.favouritePropertyFromQuickView</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.verifyAssetInPDPGallery</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.addImageAndTextFromCamera</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.editCommentInFavTab</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.deleteNotesFromFavTabProperty</td></tr>
+<tr><td>com.owners.FavouriteTab.FavouriteTab_Automation.addImageAndTextFromGallery</td></tr>
+</table>

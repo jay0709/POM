@@ -1,0 +1,118 @@
+package com.openhouse.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class OpenHouseMenu_PO {
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+
+	public By onboarding_RegnMeBtn = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[5]//android.widget.LinearLayout/android.widget.TextView");
+	public By openHouseInMe = By.xpath("//*[contains(@text,'My Open Houses')]");
+	public By navigatingSearchTab = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[1]//android.widget.LinearLayout[1]");
+
+	public By myOpenHouseTime = By.id("com.owners.buyer:id/time");
+	public By myOpenHouseMenu = By.id("com.owners.buyer:id/menu");
+	public By addressLineOne = By.id("com.owners.buyer:id/property_address_line1");
+	public By addressLineTwo = By.id("com.owners.buyer:id/property_address_line2");
+	public By openHouseHeaderTime = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By favIconInPDP = By.id("com.owners.buyer:id/property_details_favourite_fab");
+
+	public By savedOpenHouse = By.id("com.owners.buyer:id/tv_open_house_saved_info");
+	public By openHouseTabVerify = By.xpath("//*[contains(@text, 'My Open Houses')]");
+	public By menuAddress = By.id("com.owners.buyer:id/openhouse_actions_address");
+	public By menuPropertydetails = By.id("com.owners.buyer:id/openhouse_actions_property_details");
+	public By menuRequestTour = By.id("com.owners.buyer:id/openhouse_actions_request_tour");
+	public By menuCopyAddress = By.id("com.owners.buyer:id/openhouse_actions_copy_address");
+	public By menuGetDirections = By.id("com.owners.buyer:id/openhouse_actions_get_directions");
+	public By menuAddCalenderEvent = By.id("com.owners.buyer:id/openhouse_actions_add_calendar_event");
+	public By menuDeleteOpenHouse = By.id("com.owners.buyer:id/openhouse_actions_delete");
+
+	public By deleteDialouge = By.id("android:id/message");
+	public By deleteConfirmationOK = By.id("android:id/button1");
+
+	public By viewOpenHouseFromMenu = By.id("com.owners.buyer:id/open_house_view");
+	public By openHouseTittleInMenu = By.id("com.owners.buyer:id/open_house_view_titlee");
+	public By noSavedOpenHouse = By.xpath("//*[contains(@text,'No Saved Open Houses')]");
+
+	public void menuAddressVerify(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(navigatingSearchTab));
+		driver.findElement(onboarding_RegnMeBtn).click();
+		Thread.sleep(3000);
+		driver.findElement(openHouseInMe).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myOpenHouseMenu));
+		String time = driver.findElement(myOpenHouseTime).getText();
+		System.out.println("Open house time is: " + time);
+		String addressMyOpenHouse = driver.findElement(addressLineOne).getText() + ", "
+				+ driver.findElement(addressLineTwo).getText();
+		driver.findElement(myOpenHouseMenu).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(menuAddress));
+		Assert.assertEquals(addressMyOpenHouse, driver.findElement(menuAddress).getText(),
+				"Open house addess Mismatch..!");
+		System.out.println("Open house address verified as: " + addressMyOpenHouse);
+	}
+
+	public void viewPDPFromOpenHouse(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		// cf.relaunchApp(driver);
+		wait = new WebDriverWait(driver, 10);
+		// wait.until(ExpectedConditions.elementToBeClickable(navigatingSearchTab));
+		// driver.findElement(onboarding_RegnMeBtn).click();
+		// Thread.sleep(3000);
+		// driver.findElement(openHouseInMe).click();
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(myOpenHouseMenu));
+		// driver.findElement(myOpenHouseMenu).click();
+		Assert.assertEquals(driver.findElement(menuCopyAddress).getText(), "Copy Address",
+				"Copy Address text not present..!");
+		driver.findElement(menuPropertydetails).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(openHouseHeaderTime));
+		if (driver.findElement(favIconInPDP).isSelected()) {
+			driver.findElement(favIconInPDP).click();
+		}
+		System.out.println("User is navigated to PDP from Open house..");
+		cf.scrollToText("Saved to your Open Houses Schedule.", driver);
+		System.out.println("Property is saved as open house --> verifed from ME section..!");
+	}
+
+	public void deleteOpenHouse(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(navigatingSearchTab));
+		driver.findElement(onboarding_RegnMeBtn).click();
+		Thread.sleep(3000);
+		driver.findElement(openHouseInMe).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myOpenHouseMenu));
+		driver.findElement(myOpenHouseMenu).click();
+		driver.findElement(menuDeleteOpenHouse).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(deleteDialouge));
+		Assert.assertEquals(driver.findElement(deleteDialouge).getText(), "Delete this Open House?",
+				"Confirmation dialouge is not visible..!");
+		System.out.println("Confirmation before delete --> " + driver.findElement(deleteDialouge).getText());
+		driver.findElement(deleteConfirmationOK).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(noSavedOpenHouse));
+		Assert.assertEquals(driver.findElement(noSavedOpenHouse).getText(), "No Saved Open Houses",
+				"All open house not cleared");
+
+	}
+
+}

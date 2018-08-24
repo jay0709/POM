@@ -1,0 +1,88 @@
+<table border='1'>
+<tr>
+<th>Class name</th>
+<th>Method name</th>
+<th>Groups</th>
+</tr><tr>
+<td>com.owners.FavouriteTab.FavouriteTab_Automation</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>swipePhotosInFavouriteTab</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>favouritePropertyFromQuickView</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>deleteImageOnlyFromAsset</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>checkNoFavourites</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyAssetInFavTab</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addImageAndTextFromCamera</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>deleteNotesFromFavTabProperty</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyAssetInPDPGallery</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyNoSchduleTourForFSBO</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addImageAndTextFromGallery</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addCommentAndVerify</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>editCommentInFavTab</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>checkKeyboardWhenScroll</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyScheuleTourInFavTab</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>addMultilineCommentVerify</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifyToastMessageAfterfavorite</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+</table>

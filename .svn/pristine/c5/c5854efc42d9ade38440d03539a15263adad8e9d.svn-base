@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [Failed suite [Default suite]]]]">
+  <test name="Default test(failed)(failed)(failed)(failed)">
+    <classes>
+      <class name="com.owners.OpenHouse.OpenHouseInSRP">
+        <methods>
+          <include name="discoverPageOpenHose"/>
+          <include name="matchDataInPDPWithDiscovertab"/>
+          <include name="updateOpenHouseListInDiscoverTab"/>
+          <include name="afterTest"/>
+          <include name="swipeViewOpenHouse"/>
+          <include name="verifyFavIconInTiles"/>
+          <include name="beforeTest"/>
+          <include name="searchStateNotChanged"/>
+          <include name="verifyFavIconDisappear"/>
+          <include name="unauthenticatedUserOpenHouseVerify"/>
+          <include name="newTagWithOpenHouseQuickSRP"/>
+          <include name="tagAndTimeVerifyInDiscover"/>
+        </methods>
+      </class> <!-- com.owners.OpenHouse.OpenHouseInSRP -->
+    </classes>
+  </test> <!-- Default test(failed)(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Default suite]]]] -->

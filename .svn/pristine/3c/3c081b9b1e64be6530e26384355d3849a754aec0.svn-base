@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="757655" started-at="2017-06-19T20:47:02Z" finished-at="2017-06-19T20:59:40Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="757655" started-at="2017-06-19T20:47:02Z" finished-at="2017-06-19T20:59:40Z">
+      <class name="com.owners.Scripts.UserRegistration">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.owners.Scripts.UserRegistration@59494225]" name="beforeTest" is-config="true" duration-ms="12262" started-at="2017-06-20T02:17:02Z" finished-at="2017-06-20T02:17:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="OwnersApp_NewUserRegistration()[pri:1, instance:com.owners.Scripts.UserRegistration@59494225]" name="OwnersApp_NewUserRegistration" duration-ms="84767" started-at="2017-06-20T02:17:14Z" finished-at="2017-06-20T02:18:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OwnersApp_NewUserRegistration -->
+        <test-method status="PASS" signature="OwnersApp_LogOut()[pri:2, instance:com.owners.Scripts.UserRegistration@59494225]" name="OwnersApp_LogOut" duration-ms="11084" started-at="2017-06-20T02:18:39Z" finished-at="2017-06-20T02:18:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OwnersApp_LogOut -->
+        <test-method status="PASS" signature="OwnersApp_Login()[pri:3, instance:com.owners.Scripts.UserRegistration@59494225]" name="OwnersApp_Login" duration-ms="60070" started-at="2017-06-20T02:18:50Z" finished-at="2017-06-20T02:19:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OwnersApp_Login -->
+        <test-method status="PASS" signature="OwnersApp_UserRegistrationFilters()[pri:4, instance:com.owners.Scripts.UserRegistration@59494225]" name="OwnersApp_UserRegistrationFilters" duration-ms="132289" started-at="2017-06-20T02:19:50Z" finished-at="2017-06-20T02:22:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OwnersApp_UserRegistrationFilters -->
+        <test-method status="PASS" signature="OwnersApp_SRPuiValidationAndToggleViews()[pri:5, instance:com.owners.Scripts.UserRegistration@59494225]" name="OwnersApp_SRPuiValidationAndToggleViews" duration-ms="78799" started-at="2017-06-20T02:22:02Z" finished-at="2017-06-20T02:23:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OwnersApp_SRPuiValidationAndToggleViews -->
+        <test-method status="PASS" signature="FavouritePorpertyValidation()[pri:6, instance:com.owners.Scripts.UserRegistration@59494225]" name="FavouritePorpertyValidation" duration-ms="60168" started-at="2017-06-20T02:23:21Z" finished-at="2017-06-20T02:24:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FavouritePorpertyValidation -->
+        <test-method status="PASS" signature="ValidatePDPComponents()[pri:7, instance:com.owners.Scripts.UserRegistration@59494225]" name="ValidatePDPComponents" duration-ms="141610" started-at="2017-06-20T02:24:21Z" finished-at="2017-06-20T02:26:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatePDPComponents -->
+        <test-method status="PASS" signature="ValidationDiscoverTabComponents()[pri:8, instance:com.owners.Scripts.UserRegistration@59494225]" name="ValidationDiscoverTabComponents" duration-ms="28094" started-at="2017-06-20T02:26:43Z" finished-at="2017-06-20T02:27:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidationDiscoverTabComponents -->
+        <test-method status="PASS" signature="SearchFilterValidation()[pri:9, instance:com.owners.Scripts.UserRegistration@59494225]" name="SearchFilterValidation" duration-ms="144937" started-at="2017-06-20T02:27:11Z" finished-at="2017-06-20T02:29:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchFilterValidation -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.owners.Scripts.UserRegistration@59494225]" name="afterTest" is-config="true" duration-ms="3544" started-at="2017-06-20T02:29:36Z" finished-at="2017-06-20T02:29:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.owners.Scripts.UserRegistration -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

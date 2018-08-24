@@ -1,0 +1,187 @@
+package com.favourites.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class AddAssetForPDP {
+
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+	FavTabID_PO ft = new FavTabID_PO();
+	FavoritesTab_PO ftpo = new FavoritesTab_PO();
+	EditDeleteAssest_PO ed = new EditDeleteAssest_PO();
+	PDP_PO pdp = new PDP_PO();
+
+	public void addDeleteMultilineNotes(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		driver.findElement(ft.clickFavouriteTab).click();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		Thread.sleep(2000);
+		driver.findElement(ft.editTextField).click();
+		ftpo.confirmDisclaimer(driver);
+		driver.findElement(ft.editTextField).sendKeys(
+				"In Word 2013 or Word 2010, on the Review tab, in the Tracking group, in the Show Markup list, choose Comments and make sure a check mark in a box appears next to the option. Choose Comments again to clear the check mark and hide comments.");
+		driver.hideKeyboard();
+		driver.findElement(ft.saveAssetButton).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(ft.sendTextProgressBar));
+		System.out.println("Multiline asset addition completed..");
+		String multilineComment = driver.findElement(ft.commentTextView).getText();
+		if (multilineComment.contains("...")) {
+			System.out.println(
+					driver.findElement(ft.commentTextView).getText() + "\n multiline comment added successfully..");
+		}
+
+		driver.findElement(ft.showAllText).click();
+		Thread.sleep(3000);
+		String multilineCommentExpanded = driver.findElement(ft.commentTextView).getText();
+		System.out.println("Multilne comment is: " + multilineCommentExpanded);
+		driver.findElement(ft.commentTextView).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ft.commentdeleteButtonInEditPage));
+		driver.findElement(ft.commentdeleteButtonInEditPage).click();
+		driver.findElement(ft.delteNoteDeleteButton).click();
+		Thread.sleep(2000);
+	}
+
+	public void addImageToViewInPDP(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		cf.relaunchApp(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(ft.clickFavouriteTab));
+		driver.findElement(ft.clickFavouriteTab).click();
+		Thread.sleep(3000);
+		ftpo.swipePhotosInFavourite(driver);
+		int totalImageCountInFavTab = Integer
+				.parseInt(driver.findElement(ft.imageConatinerPhotoCount).getText().split("/")[1]);
+		System.out.println("Total Image before adding : " + totalImageCountInFavTab);
+		ed.addImageAssetFromCamera(driver);
+		driver.findElement(ft.favPropertyPrice).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.imageCountInPDP));
+		int totalImageCountInPDP = Integer.parseInt(driver.findElement(pdp.imageCountInPDP).getText().split("/")[1]);
+		System.out.println("Total Image count in PDP : " + totalImageCountInFavTab);
+		if (totalImageCountInFavTab < totalImageCountInPDP)
+			System.out.println("Image count updated from " + totalImageCountInFavTab + " to " + totalImageCountInPDP);
+		else
+			System.out.println("**Image count not updated..!**");
+		driver.findElement(pdp.imageCountInPDP).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryFavIncon));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryRequestTour));
+		cf.scrollToText("User Photos", driver);
+		driver.findElement(pdp.pdpGalleryPropertyPrice).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryNote));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryDeleteImage));
+		System.out.println(driver.findElement(pdp.pdpGalleryNote).getText() + " -- Text verified..");
+		driver.findElement(pdp.pdpGalleryDeleteImage).click();
+		Thread.sleep(5000);
+		driver.findElement(pdp.pdpGalleryBackButton).click();
+		Thread.sleep(2000);
+		driver.findElement(pdp.pdpGalleryBackButton).click();
+		Assert.assertEquals(totalImageCountInPDP - 1, totalImageCountInPDP - 1,
+				"Image count updated in the PDP header as well..!!");
+		System.out.println("Total image count in PDP after delete image : " + (totalImageCountInPDP - 1));
+
+	}
+
+	public void addAssetToViewInFavTab(AndroidDriver<AndroidElement> driver, String textToEnter)
+			throws InterruptedException, MalformedURLException {
+		cf.relaunchApp(driver);
+		ftpo.checkNoSavedListingsText(driver);
+		wait = new WebDriverWait(driver, 10);
+		cf.searchMapSRP("Newark,NJ", driver);
+		Thread.sleep(2000);
+		driver.findElement(ft.listSRPTab).click();
+		Thread.sleep(1000);
+		cf.verticalScrollUpwards(driver);
+		cf.verticalScrollUpwards(driver);
+		driver.findElement(pdp.priceInList).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(pdp.pdpfavIcon));
+		String pdpPrice = driver.findElement(pdp.pdpPriceView).getText();
+		driver.findElement(pdp.pdpSchoolSection).click();
+		Thread.sleep(2000);
+		cf.scrollToText("Write a note…", driver);
+		driver.findElement(ft.editTextField).click();
+		ftpo.confirmDisclaimer(driver);
+		driver.findElement(ft.editTextField).sendKeys(textToEnter);
+		driver.hideKeyboard();
+		Thread.sleep(2000);
+		driver.findElement(pdp.saveNoteButton).click();
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpFavPropertyAlertTitle));
+			System.out.println(driver.findElement(pdp.pdpFavPropertyALertMessage).getText());
+			System.out.println(driver.findElement(pdp.pdpFavPropertyALertMessage).getText() + "-- Text Verfied..!");
+			driver.findElement(pdp.doNotAskCheckBox).click();
+			driver.findElement(pdp.favButtonInAlert).click();
+		} catch (Exception ex) {
+			System.out.println("Favourite property alert message is not shown..!!");
+		}
+
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(ft.sendTextProgressBar));
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(ft.commentTextView));
+		} catch (Exception e) {
+			System.out.println("Comment added but not relfected in the view..");
+		}
+		System.out.println("Asset addition completed..");
+		cf.scrollToText(pdpPrice, driver);
+		if (driver.findElement(pdp.pdpfavIcon).isSelected() == true)
+			System.out.println("Property is automatically favorited..!!");
+		else
+			driver.findElement(pdp.pdpfavIcon).click();
+
+		driver.findElement(pdp.pdpBackButton).click();
+		Thread.sleep(2000);
+		driver.findElement(ft.clickFavouriteTab).click();
+		String favPrice = driver.findElement(ft.favPropertyPrice).getText();
+		Assert.assertEquals(pdpPrice, favPrice, "Property Price does not match..!!");
+		String lastComment = driver.findElement(ft.commentTextView).getText().trim().substring(12);
+		Assert.assertEquals(textToEnter.trim(), lastComment.trim(), "Comment added from PDP not macthing in Fav tab/.");
+		System.out.println("Comment added from PDP are reflecting in Fav tab properly.");
+		driver.findElement(ft.commentTextView).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ft.commentdeleteButtonInEditPage));
+		driver.findElement(ft.commentdeleteButtonInEditPage).click();
+		driver.findElement(ft.delteNoteDeleteButton).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ft.imageContainerInFav));
+	}
+
+	public void checkToastMessageInPDP(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		cf.relaunchApp(driver);
+		ftpo.checkNoSavedListingsText(driver);
+		wait = new WebDriverWait(driver, 5);
+		driver.findElement(pdp.navigateSearchTab).click();
+		driver.findElement(ft.listSRPTab).click();
+		cf.verticalScrollUpwards(driver);
+		driver.findElement(pdp.priceInList).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpfavIcon));
+		driver.findElement(pdp.pdpfavIcon).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.favToastMessage));
+
+		System.out.println("Toast Message shown at: " + driver.getDeviceTime());
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(pdp.favToastMessage));
+		System.out.println("Toast Message removed at: " + driver.getDeviceTime());
+
+		driver.findElement(pdp.pdpfavIcon).click();
+		Thread.sleep(1000);
+		driver.findElement(pdp.pdpfavIcon).click();
+		Thread.sleep(3000);
+		driver.findElement(pdp.favToastMessage).click();
+		System.out.println("Clicked on the Fav Toast message..!!");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ft.imageContainerInFav));
+		System.out.println("App is navigated to Fav tab. Property is visible here...");
+	}
+
+}

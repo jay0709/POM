@@ -1,0 +1,282 @@
+/**
+ * 
+ */
+package com.owners;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+/**
+ * @author isaacindeevervemula
+ *
+ */
+public class commonFunctions {
+	AndroidDriver<AndroidElement> driver;
+	WebDriverWait wait;
+
+	void startAppium() {
+
+	}
+
+	void stopAppium() {
+
+	}
+
+	public static String randomAlphaNumeric(int count) {
+		final String token = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		StringBuilder builder = new StringBuilder();
+		builder.append("test_");
+		while (count-- != 0) {
+			int character = (int) (Math.random() * token.length());
+			builder.append(token.charAt(character));
+		}
+		return builder.toString();
+	}
+
+	public void takeScreenshot(String filename, AndroidDriver<AndroidElement> driver)
+			throws IOException, InterruptedException {
+		File image1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(image1, new File(" " + filename));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public String[] countBedBathSqft(String idText) {
+		String elementId = idText;
+		String[] splitValue = elementId.split(" • ");
+		// System.out.println(splitValue[0] + ":" + splitValue[1] + ":" +
+		// splitValue[2]);
+		return splitValue;
+
+	}
+
+	public void scrollToText(String text, AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		driver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
+						+ text + "\").instance(0))");
+	}
+
+	public void verticalScrollUpwards(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		Dimension size;
+		size = driver.manage().window().getSize();
+		int xCoordinate = (int) (size.width * 0.5);
+		int startY = (int) (size.height * 0.78);
+		int endY = (int) (size.height * 0.30);
+		// System.out.println(xCoordinate + ":" + startY + ":" + endY);
+		driver.swipe(xCoordinate, startY, xCoordinate, endY, 3000);
+	}
+
+	public void verticalScrollDownwrds(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		Dimension size;
+		size = driver.manage().window().getSize();
+		int xCoordinate = (int) (size.width * 0.5);
+		int endY = (int) (size.height * 0.78);
+		int startY = (int) (size.height * 0.30);
+		// System.out.println(xCoordinate + ":" + startY + ":" + endY);
+		driver.swipe(xCoordinate, startY, xCoordinate, endY, 3000);
+	}
+
+	public By navigatingSearchTab = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[1]//android.widget.LinearLayout[1]");
+	public By navigatingDiscoverTab = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[3]//android.widget.LinearLayout[1]");
+
+	public By clickSearchBar = By.id("com.owners.buyer:id/search_result_title_text_view");
+	public By typeInsearchBar = By.id("com.owners.buyer:id/search_suggestion_search");
+	public By searchResultStateName = By.id("com.owners.buyer:id/suggestion_line_two");
+	public By searchingDialouge = By.id("com.owners.buyer:id/dialog_account_message");
+	public By searchNearby = By.name("Homes Near:");
+	public By filtersTab = By.id("com.owners.buyer:id/search_filter_view");
+	public By applyFilterButton = By.id("com.owners.buyer:id/property_filters_done_button");
+	public By clearFiltersButton = By.id("com.owners.buyer:id/property_filters_clear_button");
+	public By popUpMessage = By.id("com.android.packageinstaller:id/permission_message");
+	public By allowPermission = By.id("com.android.packageinstaller:id/permission_allow_button");
+	public By savedSearchStar = By.id("com.owners.buyer:id/saved_search_star");
+	public By clickDiscoverTab = By.xpath("//android.support.v7.app.ActionBar.Tab[3]//android.widget.LinearLayout[1]");
+	public By savedSearchesHeader = By.xpath("//*[contains(@text, 'Saved Searches')]");
+	public By saveSearchText = By.id("com.owners.buyer:id/search_result_save_search_text_view");
+	public By mapViewSRPClick = By.id("com.owners.buyer:id/search_map_view");
+	public By clusterToPIN = By.xpath("*//android.view.View[@index='0']");
+	public By quickViewFavIcon = By.id("com.owners.buyer:id/details_container");
+	public By srpMapBtn = By.id("com.owners.buyer:id/search_map_view");
+
+	public By scheduleTourButton = By.id("android:id/button1");
+	public By cancelButton = By.id("android:id/button2");
+	public By doNotAsk = By.id("com.owners.buyer:id/checkbox");
+
+	public By threeDottedMenuDiscoverTab = By.id("com.owners.buyer:id/suggestion_item_image_view_menu");
+	public By viewSavedSearch = By.xpath("//android.widget.LinearLayout[@index= '0']");
+	public By editSavedSearch = By.xpath("//android.widget.LinearLayout[@index='1']");
+	// public By editSavedSearch =
+	// By.xpath("//android.widget.TextView[contains(text(),'Edit Saved
+	// Search')]");
+	public By deleteSavedSearch = By.xpath("//android.widget.LinearLayout[@index= '2']");
+
+	public By exactSwitchBedFilter = By.id("com.owners.buyer:id/filter_exact_bed_switch");
+	public By exactSwitchBathFilter = By.id("com.owners.buyer:id/filter_exact_bath_switch");
+	public By fiveBedFilter = By.id("com.owners.buyer:id/filter_selection_item_four");
+	public By fiveBathFilter = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'search_result_filter_baths_selection')]//android.widget.TextView[contains(@resource-id,'filter_selection_item_four')]");
+	public By onboarding_SetMinBed = By.id("com.owners.buyer:id/filter_selection_item_four");
+
+	@SuppressWarnings("deprecation")
+	public void searchMapSRP(String searchString, AndroidDriver<AndroidElement> driver) {
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(navigatingSearchTab));
+		driver.findElement(navigatingSearchTab).click();
+		driver.findElement(clickSearchBar).click();
+		driver.findElement(typeInsearchBar).sendKeys(searchString);
+		wait.until(ExpectedConditions.textToBePresentInElement(searchResultStateName, searchString.split(",")[1]));
+		driver.findElement(searchResultStateName).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(searchingDialouge));
+		driver.findElement(srpMapBtn).click();
+	}
+
+	public void allowLocationAccess(AndroidDriver<AndroidElement> driver) {
+
+		try {
+			wait = new WebDriverWait(driver, 20);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(popUpMessage));
+			driver.findElement(allowPermission).click();
+		} catch (Exception e) {
+			System.out.println("Skip button not present...moving ahead..");
+		}
+	}
+
+	public void relaunchApp(AndroidDriver<AndroidElement> driver) {
+		wait = new WebDriverWait(driver, 15);
+		driver.closeApp();
+		driver.startActivity("com.owners.buyer", "com.owners.buyer.MainActivity");
+		try {
+			driver.findElement(By.xpath("//android.widget.Button[@index='1']")).click();
+		} catch (Exception e) {
+			System.out.println("App update dialouge not present.. Moving ahead...");
+		}
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(scheduleTourButton));
+			driver.findElement(doNotAsk).click();
+			Thread.sleep(2000);
+			driver.findElement(cancelButton).click();
+		} catch (Exception e1) {
+			System.out.println("Schedule Tour dialouge not present.. Moving ahead...");
+		}
+
+	}
+
+	public void clearAllFilters(AndroidDriver<AndroidElement> driver) {
+		driver.findElement(navigatingSearchTab).click();
+		driver.findElement(filtersTab).click();
+		driver.findElement(clearFiltersButton).click();
+		driver.findElement(applyFilterButton).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(searchingDialouge));
+
+	}
+
+	public void deleteAllSAvedSearch(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		wait = new WebDriverWait(driver, 20);
+		relaunchApp(driver);
+		wait.until(ExpectedConditions.presenceOfElementLocated(clickDiscoverTab));
+		driver.findElement(clickDiscoverTab).click();
+		System.out.println("Discover Tab clicked");
+		try {
+			scrollToText("Saved Searches", driver);
+			while (driver.findElement(savedSearchStar).isEnabled()) {
+				driver.findElement(savedSearchStar).click();
+			}
+		} catch (Exception e) {
+			System.out.println("All saved search deleted..!");
+		}
+	}
+
+	public void saveSearch(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		driver.findElement(saveSearchText).click();
+		Thread.sleep(5000);
+		if (driver.findElement(saveSearchText).getText().equals("SAVED"))
+			System.out.println("Search is Saved..!");
+		else
+			driver.findElement(saveSearchText).click();
+		Thread.sleep(5000);
+	}
+
+	public void fromClusterToPinView(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+
+		Thread.sleep(5000);
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(mapViewSRPClick));
+		driver.findElement(mapViewSRPClick).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(clusterToPIN));
+		driver.findElement(By.xpath("//android.view.View[@content-desc='Google Map']/android.view.View[2]")).click();
+
+		try {
+			if (driver.findElement(quickViewFavIcon).isEnabled()) {
+				System.out.println("PIN VIEW ENABLED...");
+			}
+		} catch (Exception e) {
+			System.out.println("Not clicked on the PIN");
+			driver.findElement(By.xpath("*//android.view.View[@index='1']")).click();
+			fromClusterToPinView(driver);
+		}
+	}
+
+	public void captureLog(AndroidDriver<AndroidElement> driver, String testName) throws Exception {
+		DateFormat df = new SimpleDateFormat("dd_MM_yyyy_HH-mm-ss");
+		Date today = Calendar.getInstance().getTime();
+		String reportDate = df.format(today);
+		driver.executeScript("adb logcat OkHttp:D *:S | grep 'BUYER'", null);
+		String logPath = "//Users//Jayabrata//Documents//workspace//LeadsLog//";
+		System.out.println(driver.getSessionId() + ": Saving device log...");
+		System.out.println(driver.getSessionId() + ": Saving device log - Done.");
+	}
+
+	public void editSavedSearchTab(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		relaunchApp(driver);
+		// driver.findElement(navigatingDiscoverTab).click();
+		driver.findElement(clickSearchBar).click();
+		// scrollToText("Saved Searches", driver);
+		Thread.sleep(3000);
+		driver.hideKeyboard();
+		driver.findElement(threeDottedMenuDiscoverTab).click();
+		Thread.sleep(3000);
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(editSavedSearch));
+		driver.findElement(editSavedSearch).click();
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(searchingDialouge));
+	}
+
+	public void selectfilterBedBath(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		// driver.findElement(exactSwitchBedFilter).click();
+		// driver.findElement(exactSwitchBathFilter).click();
+		driver.findElement(fiveBathFilter).click();
+		driver.findElement(fiveBedFilter).click();
+		Thread.sleep(2000);
+		driver.findElement(applyFilterButton).click();
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(searchingDialouge));
+	}
+
+}

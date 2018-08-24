@@ -1,0 +1,71 @@
+package com.favourites.PageFactory;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class AddAssetExtremeCases {
+
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+	FavTabID_PO ft = new FavTabID_PO();
+	FavoritesTab_PO ftpo = new FavoritesTab_PO();
+	EditDeleteAssest_PO ed = new EditDeleteAssest_PO();
+
+	public void addMultipleComments(AndroidDriver<AndroidElement> driver, int noOfAsset) throws InterruptedException {
+		cf.relaunchApp(driver);
+		driver.findElement(ft.clickFavouriteTab).click();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		Thread.sleep(2000);
+		driver.findElement(ft.editTextField).click();
+		ftpo.confirmDisclaimer(driver);
+		for (int i = 1; i <= noOfAsset; i++) {
+			driver.findElement(ft.editTextField).sendKeys("Asset no: " + i);
+			driver.hideKeyboard();
+			driver.findElement(ft.saveAssetButton).click();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(ft.sendTextProgressBar));
+			System.out.println("Asset " + i + " addition completed..");
+		}
+	}
+
+	public void addDeleteMultilineNotes(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		driver.findElement(ft.clickFavouriteTab).click();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		Thread.sleep(2000);
+		driver.findElement(ft.editTextField).click();
+		ftpo.confirmDisclaimer(driver);
+		driver.findElement(ft.editTextField).sendKeys(
+				"In Word 2013 or Word 2010, on the Review tab, in the Tracking group, in the Show Markup list, choose Comments and make sure a check mark in a box appears next to the option. Choose Comments again to clear the check mark and hide comments.");
+		driver.hideKeyboard();
+		driver.findElement(ft.saveAssetButton).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(ft.sendTextProgressBar));
+		System.out.println("Multiline asset addition completed..");
+		String multilineComment = driver.findElement(ft.commentTextView).getText();
+		if (multilineComment.contains("...")) {
+			System.out.println(
+					driver.findElement(ft.commentTextView).getText() + "\n multiline comment added successfully..");
+		}
+
+		driver.findElement(ft.showAllText).click();
+		Thread.sleep(3000);
+		String multilineCommentExpanded = driver.findElement(ft.commentTextView).getText();
+		System.out.println("Multilne comment is: " + multilineCommentExpanded);
+		driver.findElement(ft.commentTextView).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ft.commentdeleteButtonInEditPage));
+		driver.findElement(ft.commentdeleteButtonInEditPage).click();
+		driver.findElement(ft.delteNoteDeleteButton).click();
+	}
+
+}

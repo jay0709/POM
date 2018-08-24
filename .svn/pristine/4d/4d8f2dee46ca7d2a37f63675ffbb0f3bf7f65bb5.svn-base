@@ -1,0 +1,10 @@
+<h2>Methods that were not run</h2><table>
+<tr><td>com.owners.Scripts.SanitySuite.ValidatePDPComponents</td></tr>
+<tr><td>com.owners.Scripts.SanitySuite.OwnersApp_UserRegistrationFilters</td></tr>
+<tr><td>com.owners.Scripts.SanitySuite.ValidationDiscoverTabComponents</td></tr>
+<tr><td>com.owners.Scripts.SanitySuite.OwnersApp_Login</td></tr>
+<tr><td>com.owners.Scripts.SanitySuite.FavouritePorpertyValidation</td></tr>
+<tr><td>com.owners.Scripts.SanitySuite.OwnersApp_NewUserRegistration</td></tr>
+<tr><td>com.owners.Scripts.SanitySuite.OwnersApp_LogOut</td></tr>
+<tr><td>com.owners.Scripts.SanitySuite.OwnersApp_SRPuiValidationAndToggleViews</td></tr>
+</table>

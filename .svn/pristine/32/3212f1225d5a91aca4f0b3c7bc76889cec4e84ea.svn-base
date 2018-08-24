@@ -1,0 +1,280 @@
+package com.openhouse.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.SearchFilters_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class OpenHouseDiscoverPage_PO {
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	properties pr = new properties();
+	OpenHouse_PO opn = new OpenHouse_PO();
+	SearchFilters_PO sf = new SearchFilters_PO();
+
+	public By openTextInTile = By.id("com.owners.buyer:id/search_result_open_house");
+	public By onboarding_RegnMeBtn = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[5]//android.widget.LinearLayout/android.widget.TextView");
+	public By openHouseInMe = By.xpath("//*[contains(@text,'My Open Houses')]");
+	public By navigatingDiscoverTab = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[3]//android.widget.LinearLayout[1]");
+	public By navigatingMeTab = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[5]//android.widget.LinearLayout/android.widget.TextView");
+	public By navigateFavouriteTab = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[2]//android.widget.LinearLayout[1]");
+	public By signOutText = By.xpath("//android.widget.TextView[contains(@text,'Sign Out')]");
+
+	public By openHouseItemAddress = By.id("com.owners.buyer:id/item_recent_property_info_line_1");
+	public By openHouseItemAddressState = By.id("com.owners.buyer:id/item_recent_property_info_line_2");
+	public By searchingDialouge = By.id("com.owners.buyer:id/dialog_account_message");
+	public By saveSearchText = By.id("com.owners.buyer:id/search_result_save_search_text_view");
+	public By signOutOkBtn = By.id("android:id/button1");
+	public By openHouseHeaderTime = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By openHousePDPAddress = By.id("com.owners.buyer:id/property_item_address_text_view");
+	public By favIconPDP = By.id("com.owners.buyer:id/property_details_favourite_fab");
+	public By favToast = By.id("com.owners.buyer:id/favourite_text");
+	public By pdpBackButton = By.id("com.owners.buyer:id/property_details_back_button");
+
+	public By viewOpenHouseFromMenu = By.id("com.owners.buyer:id/open_house_view");
+	public By openHouseTittleInMenu = By.id("com.owners.buyer:id/open_house_view_titlee");
+	public By searchResultInSRP = By.id("com.owners.buyer:id/search_result_title_text_view");
+	public By openHouseHeaderText = By.id("com.owners.buyer:id/search_result_open_house");
+	public By openTimeDiscoverTile = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By openTimeSwipeSRP = By.id("com.owners.buyer:id/search_result_open_house_time_swipe");
+	public By navigateSwipetab = By.id("com.owners.buyer:id/search_swipe_view");
+	public By appliedFilterCount = By.id("com.owners.buyer:id/search_result_subtitle_text_view");
+	public By srpMapBtn = By.id("com.owners.buyer:id/search_map_view");
+	public By heartIcon = By.xpath("//android.widget.ImageView[@index='0']");
+	public By favButtonInFav = By.id("com.owners.buyer:id/fav_button");
+
+	String searchName = "Atlanta,GA";
+
+	public void discoverTabOpenHouse_totalOpenHouseInMenu(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		wait = new WebDriverWait(driver, 20);
+
+		// Delete all saved search & Save a new one
+		cf.deleteAllSAvedSearch(driver);
+		cf.searchMapSRP(searchName, driver);
+		cf.clearAllFilters(driver);
+		cf.saveSearch(driver);
+
+		// navigation to Discover tab
+		wait.until(ExpectedConditions.presenceOfElementLocated(navigatingDiscoverTab));
+		driver.findElement(navigatingDiscoverTab).click();
+
+		// Verifying the Open houses section with items
+		try {
+			cf.scrollToText("Open Houses", driver);
+			cf.scrollToText("Advice", driver);
+			Assert.assertEquals(driver.findElement(openHouseItemAddressState).getText().split(",")[0],
+					searchName.split(",")[0], "Location of the Open houses does not macth with Saved search Locaiton");
+			System.out.println("Open houses are visible for the Recent Saved Search..!");
+		} catch (Exception e) {
+			System.out.println("No Open house found for the Recent Saved search");
+		}
+
+		// counting the no of Open Houses in Menu
+		driver.findElement(onboarding_RegnMeBtn).click();
+		Thread.sleep(3000);
+		driver.findElement(openHouseInMe).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(openHouseTittleInMenu));
+		System.out.println(driver.findElement(openHouseTittleInMenu).getText());
+		driver.findElement(viewOpenHouseFromMenu).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(searchingDialouge));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultInSRP));
+		Assert.assertEquals(driver.findElement(searchResultInSRP).getText().split(",")[0], searchName.split(",")[0],
+				"Wrong search triggered..!");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(openHouseHeaderText));
+		if (driver.findElement(appliedFilterCount).getText().equals("1"))
+			System.out.println("Open house filter is auto applied from Open house section search..!");
+		else
+			System.out.println("Open house filter is not auto applied..!");
+		Assert.assertEquals(driver.findElement(saveSearchText).getText(), "SAVED", "Search is not saved..!");
+		System.out.println("Saved search status does not changed..!");
+		Thread.sleep(5000);
+	}
+
+	public void swipeViewOpenHosueVerificaion(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+
+		String ListSRPTime = driver.findElement(openTimeDiscoverTile).getText();
+		// Navigate to Swipe Tab
+		driver.findElement(navigateSwipetab).click();
+		String SwipeSRPTime = driver.findElement(openTimeSwipeSRP).getText();
+		Assert.assertEquals(SwipeSRPTime, ListSRPTime, "Open house time does not match..!");
+		System.out.println(driver.findElement(openHouseHeaderText).getText() + " House Tag available in Swipe SRP..!");
+		System.out.println("Open House details in Quick View: " + driver.findElement(openTimeSwipeSRP).getText());
+		cf.deleteAllSAvedSearch(driver);
+	}
+
+	public void saveSearchNotAffected(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+
+		// Delete all saved search & Save a new one
+		cf.deleteAllSAvedSearch(driver);
+		cf.searchMapSRP(searchName, driver);
+		cf.clearAllFilters(driver);
+		cf.saveSearch(driver);
+
+		// Checking the status of the saved search.
+		Assert.assertEquals(driver.findElement(saveSearchText).getText(), "SAVED", "Search is not saved..!");
+		opn.turnOnOpenHouseFilter(driver);
+		Assert.assertEquals(driver.findElement(saveSearchText).getText(), "SAVED",
+				"Search state is changed after applying open house filter...!");
+		System.out.println("Search state is not changed after applying open house filter..!");
+
+	}
+
+	public void verifyTagTimeInDiscoverPage(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+
+		// navigation to Discover tab
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.presenceOfElementLocated(navigatingDiscoverTab));
+		driver.findElement(navigatingDiscoverTab).click();
+
+		// Check the Tag & Time
+		try {
+			cf.scrollToText("Open Houses", driver);
+			cf.scrollToText("Advice", driver);
+			System.out.println("Open houses are visible for the Recent Saved Search..!");
+		} catch (Exception e) {
+			System.out.println("No Open house found for the Recent Saved search");
+		}
+		String verifyOpenTag = driver.findElement(openTextInTile).getText();
+		if (verifyOpenTag.equals("OPEN")) {
+			System.out.println("Open Tag present in the Discover page Tiles..");
+		}
+
+		String verifyTime = driver.findElement(openTimeDiscoverTile).getText();
+		System.out.println(
+				"Open house time for " + driver.findElement(openHouseItemAddress).getText() + " is: " + verifyTime);
+
+	}
+
+	public void matchDataInPDP(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		String addressDiscover[] = driver.findElement(openHouseItemAddress).getText().split(" ");
+		String srpDate = driver.findElement(openTimeDiscoverTile).getText().toLowerCase();
+		String[] dateSRP = srpDate.split(",");
+		driver.findElement(openTimeDiscoverTile).click();
+		Thread.sleep(10000);
+		String pdpDate = driver.findElement(openHouseHeaderTime).getText().toLowerCase();
+		String[] datePDP = pdpDate.split(",");
+		Assert.assertEquals(dateSRP[0], datePDP[0], "Open House DATE is not matching");
+		String[] pdpAddress = driver.findElement(openHousePDPAddress).getText().split(" ");
+		System.out.println("PDP Address is: " + driver.findElement(openHousePDPAddress).getText());
+		Assert.assertEquals(addressDiscover[0], addressDiscover[0], "PDP is opened but address not matching..!");
+	}
+
+	public void noOpenHouseUnauthenticatedUser(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		cf.deleteAllSAvedSearch(driver);
+		cf.searchMapSRP("Atlanta,GA", driver);
+		cf.clearAllFilters(driver);
+		cf.saveSearch(driver);
+
+		// navigation to Discover tab
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.presenceOfElementLocated(navigatingDiscoverTab));
+		driver.findElement(navigatingDiscoverTab).click();
+
+		// Verifying the Open houses section with items
+		try {
+			cf.scrollToText("Open Houses", driver);
+			cf.scrollToText("Advice", driver);
+			System.out.println("Open houses are visible for the Recent Saved Search..!");
+		} catch (Exception e) {
+			System.out.println("No Open house found for the Recent Saved search");
+		}
+
+		// Log out from the app
+		driver.findElement(navigatingMeTab).click();
+		driver.findElement(navigatingMeTab).click();
+		cf.scrollToText("Sign Out", driver);
+		driver.findElement(signOutText).click();
+		driver.findElement(signOutOkBtn).click();
+		Thread.sleep(5000);
+
+		// Navigate to Discover tab to check open house section
+		wait.until(ExpectedConditions.presenceOfElementLocated(navigatingDiscoverTab));
+		driver.findElement(navigatingDiscoverTab).click();
+
+		try {
+			cf.scrollToText("Open Houses", driver);
+			System.out.println("Open houses are visible for the Recent Saved Search..! THIS TEST CASE IS FAILED");
+		} catch (Exception e) {
+			System.out.println("No Open house section found as user is logged out");
+		}
+	}
+
+	public void favOpenHousePDP(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		driver.findElement(favIconPDP).click();
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(favToast));
+		System.out.println("Property has been favorited..!");
+		driver.findElement(pdpBackButton).click();
+		cf.scrollToText("Advice", driver);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(heartIcon));
+		if (driver.findElement(heartIcon).isEnabled())
+			System.out.println("Heart Icon Present in the discover tab tiles..!");
+		else
+			System.out.println("Property favorited but Heart icon not appeared in the Discover page tiles..!");
+
+	}
+
+	public void unFavOpenHouse(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		driver.findElement(navigateFavouriteTab).click();
+		Thread.sleep(2000);
+		driver.findElement(favButtonInFav).click();
+		Thread.sleep(5000);
+		driver.findElement(navigatingDiscoverTab).click();
+		try {
+			driver.findElement(heartIcon).isEnabled();
+			System.out.println("Property is not unfavorited properly..!!");
+		} catch (Exception e) {
+			System.out.println("Property is unfavorited properly from Disocver tiles..!!");
+		}
+
+	}
+
+	public void openHouseAfterChangeSavedSearch(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		String addressDiscoverAfter = null;
+		// driver.findElement(navigatingDiscoverTab).click();
+		cf.scrollToText("Advice", driver);
+		String addressDiscoverBefore = driver.findElement(openHouseItemAddress).getText();
+		cf.editSavedSearchDiscoverTab(driver);
+		cf.selectfilterBedBath(driver);
+		driver.findElement(navigatingDiscoverTab).click();
+		cf.scrollToText("Advice", driver);
+		try {
+			addressDiscoverAfter = driver.findElement(openHouseItemAddress).getText();
+		} catch (Exception e) {
+			System.out.println("No Open House available in the applied filter..!");
+			throw new RuntimeException();
+		}
+		System.out.println("Previous property in the tiles was: " + addressDiscoverBefore);
+		System.out.println("Now the address has been showing as: " + addressDiscoverAfter);
+		if (addressDiscoverAfter.equals(addressDiscoverBefore))
+			System.out.println("Saved Search updated but first property is not changed in the list..!");
+		else
+			System.out.println("Open house list has been updated..!");
+
+	}
+}

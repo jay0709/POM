@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">20 methods, 4 failed,   16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="addImageAndTextFromGallery">addImageAndTextFromGallery</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="deleteImageOnlyFromAsset">deleteImageOnlyFromAsset</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyAssetInFavTab">verifyAssetInFavTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyAssetInPDPGallery">verifyAssetInPDPGallery</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="addCommentAndVerify">addCommentAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="addImageAndTextFromCamera">addImageAndTextFromCamera</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="addMultilineCommentVerify">addMultilineCommentVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="checkKeyboardWhenScroll">checkKeyboardWhenScroll</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="checkNoFavourites">checkNoFavourites</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="deleteNotesFromFavTabProperty">deleteNotesFromFavTabProperty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="editCommentInFavTab">editCommentInFavTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="favouritePropertyFromQuickView">favouritePropertyFromQuickView</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="swipePhotosInFavouriteTab">swipePhotosInFavouriteTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyAvailableTimes">verifyAvailableTimes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyMultipleCommentAdd">verifyMultipleCommentAdd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyNoSchduleTourForFSBO">verifyNoSchduleTourForFSBO</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyScheuleTourInFavTab">verifyScheuleTourInFavTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifySwipeImages">verifySwipeImages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyToastMessageAfterfavorite">verifyToastMessageAfterfavorite</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.FavouriteTab.FavouriteTab_Automation" hash-for-method="verifyUserDetails">verifyUserDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.owners.FavouriteTab.FavouriteTab_Automation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addImageAndTextFromGallery">
+                  </a> <!-- addImageAndTextFromGallery -->
+                  <span class="method-name">addImageAndTextFromGallery</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to no longer be visible: By.id: com.owners.buyer:id/progressBar
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 65314aed-15d5-4bb5-bd6d-e09aac804ff5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.favourites.PageFactory.EditDeleteAssest_PO.addImageFromGallery(EditDeleteAssest_PO.java:132)
+	at com.owners.FavouriteTab.FavouriteTab_Automation.addImageAndTextFromGallery(FavouriteTab_Automation.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteImageOnlyFromAsset">
+                  </a> <!-- deleteImageOnlyFromAsset -->
+                  <span class="method-name">deleteImageOnlyFromAsset</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 73 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 65314aed-15d5-4bb5-bd6d-e09aac804ff5
+*** Element info: {Using=id, value=com.owners.buyer:id/property_comment_read_more_button}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.favourites.PageFactory.EditDeleteAssest_PO.deleteImageFromAsset(EditDeleteAssest_PO.java:145)
+	at com.owners.FavouriteTab.FavouriteTab_Automation.deleteImageOnlyFromAsset(FavouriteTab_Automation.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAssetInFavTab">
+                  </a> <!-- verifyAssetInFavTab -->
+                  <span class="method-name">verifyAssetInFavTab</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 401 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 65314aed-15d5-4bb5-bd6d-e09aac804ff5
+*** Element info: {Using=id, value=com.owners.buyer:id/favorites_empty_message_text_view}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.favourites.PageFactory.FavoritesTab_PO.checkNoSavedListingsText(FavoritesTab_PO.java:64)
+	at com.favourites.PageFactory.AddAssetForPDP.addAssetToViewInFavTab(AddAssetForPDP.java:107)
+	at com.owners.FavouriteTab.FavouriteTab_Automation.verifyAssetInFavTab(FavouriteTab_Automation.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAssetInPDPGallery">
+                  </a> <!-- verifyAssetInPDPGallery -->
+                  <span class="method-name">verifyAssetInPDPGallery</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 299 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 65314aed-15d5-4bb5-bd6d-e09aac804ff5
+*** Element info: {Using=id, value=com.owners.buyer:id/tv_photos_page_number}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.favourites.PageFactory.AddAssetForPDP.addImageToViewInPDP(AddAssetForPDP.java:69)
+	at com.owners.FavouriteTab.FavouriteTab_Automation.verifyAssetInPDPGallery(FavouriteTab_Automation.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.owners.FavouriteTab.FavouriteTab_Automation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addCommentAndVerify">
+                  </a> <!-- addCommentAndVerify -->
+                  <span class="method-name">addCommentAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addImageAndTextFromCamera">
+                  </a> <!-- addImageAndTextFromCamera -->
+                  <span class="method-name">addImageAndTextFromCamera</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addMultilineCommentVerify">
+                  </a> <!-- addMultilineCommentVerify -->
+                  <span class="method-name">addMultilineCommentVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkKeyboardWhenScroll">
+                  </a> <!-- checkKeyboardWhenScroll -->
+                  <span class="method-name">checkKeyboardWhenScroll</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkNoFavourites">
+                  </a> <!-- checkNoFavourites -->
+                  <span class="method-name">checkNoFavourites</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteNotesFromFavTabProperty">
+                  </a> <!-- deleteNotesFromFavTabProperty -->
+                  <span class="method-name">deleteNotesFromFavTabProperty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="editCommentInFavTab">
+                  </a> <!-- editCommentInFavTab -->
+                  <span class="method-name">editCommentInFavTab</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="favouritePropertyFromQuickView">
+                  </a> <!-- favouritePropertyFromQuickView -->
+                  <span class="method-name">favouritePropertyFromQuickView</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="swipePhotosInFavouriteTab">
+                  </a> <!-- swipePhotosInFavouriteTab -->
+                  <span class="method-name">swipePhotosInFavouriteTab</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAvailableTimes">
+                  </a> <!-- verifyAvailableTimes -->
+                  <span class="method-name">verifyAvailableTimes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMultipleCommentAdd">
+                  </a> <!-- verifyMultipleCommentAdd -->
+                  <span class="method-name">verifyMultipleCommentAdd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyNoSchduleTourForFSBO">
+                  </a> <!-- verifyNoSchduleTourForFSBO -->
+                  <span class="method-name">verifyNoSchduleTourForFSBO</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyScheuleTourInFavTab">
+                  </a> <!-- verifyScheuleTourInFavTab -->
+                  <span class="method-name">verifyScheuleTourInFavTab</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySwipeImages">
+                  </a> <!-- verifySwipeImages -->
+                  <span class="method-name">verifySwipeImages</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyToastMessageAfterfavorite">
+                  </a> <!-- verifyToastMessageAfterfavorite -->
+                  <span class="method-name">verifyToastMessageAfterfavorite</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserDetails">
+                  </a> <!-- verifyUserDetails -->
+                  <span class="method-name">verifyUserDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/private/var/folders/dc/4cxwlky12130hd_c16x5_00c0000gq/T/testng-eclipse--167080308/testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.owners.FavouriteTab.FavouriteTab_Automation&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(20);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyMultipleCommentAdd')
+data.setCell(0, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(0, 3, 161574);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'favouritePropertyFromQuickView')
+data.setCell(1, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(1, 3, 107266);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addImageAndTextFromGallery')
+data.setCell(2, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(2, 3, 99345);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'addImageAndTextFromCamera')
+data.setCell(3, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(3, 3, 79882);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyUserDetails')
+data.setCell(4, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(4, 3, 73307);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'addCommentAndVerify')
+data.setCell(5, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(5, 3, 61051);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyToastMessageAfterfavorite')
+data.setCell(6, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(6, 3, 57114);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'addMultilineCommentVerify')
+data.setCell(7, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(7, 3, 52671);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyNoSchduleTourForFSBO')
+data.setCell(8, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(8, 3, 43321);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'checkNoFavourites')
+data.setCell(9, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(9, 3, 42839);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'editCommentInFavTab')
+data.setCell(10, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(10, 3, 37687);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'deleteNotesFromFavTabProperty')
+data.setCell(11, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(11, 3, 36305);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifySwipeImages')
+data.setCell(12, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(12, 3, 32657);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'checkKeyboardWhenScroll')
+data.setCell(13, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(13, 3, 31675);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyAssetInPDPGallery')
+data.setCell(14, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(14, 3, 24896);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyAssetInFavTab')
+data.setCell(15, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(15, 3, 14885);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyAvailableTimes')
+data.setCell(16, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(16, 3, 14124);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'swipePhotosInFavouriteTab')
+data.setCell(17, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(17, 3, 12761);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyScheuleTourInFavTab')
+data.setCell(18, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(18, 3, 9241);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'deleteImageOnlyFromAsset')
+data.setCell(19, 2, 'com.owners.FavouriteTab.FavouriteTab_Automation')
+data.setCell(19, 3, 75);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 16 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.owners.FavouriteTab.FavouriteTab_Automation</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">checkNoFavourites</span>
+                <span class="method-start">8299 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addCommentAndVerify</span>
+                <span class="method-start">51141 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">editCommentInFavTab</span>
+                <span class="method-start">112194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteNotesFromFavTabProperty</span>
+                <span class="method-start">149882 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addImageAndTextFromCamera</span>
+                <span class="method-start">186189 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addImageAndTextFromGallery</span>
+                <span class="method-start">266072 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">deleteImageOnlyFromAsset</span>
+                <span class="method-start">366008 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">swipePhotosInFavouriteTab</span>
+                <span class="method-start">366090 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">favouritePropertyFromQuickView</span>
+                <span class="method-start">378852 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addMultilineCommentVerify</span>
+                <span class="method-start">486120 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyAssetInPDPGallery</span>
+                <span class="method-start">538793 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyAssetInFavTab</span>
+                <span class="method-start">564298 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkKeyboardWhenScroll</span>
+                <span class="method-start">579186 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyToastMessageAfterfavorite</span>
+                <span class="method-start">610862 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyScheuleTourInFavTab</span>
+                <span class="method-start">667976 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAvailableTimes</span>
+                <span class="method-start">677218 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyUserDetails</span>
+                <span class="method-start">691343 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyNoSchduleTourForFSBO</span>
+                <span class="method-start">764651 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyMultipleCommentAdd</span>
+                <span class="method-start">807973 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySwipeImages</span>
+                <span class="method-start">969548 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">1002206 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

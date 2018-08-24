@@ -1,0 +1,98 @@
+/**
+ * 
+ */
+package com.owners.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+/**
+ * @author chakraja
+ *
+ */
+public class SearchFilters_PO {
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	properties pr = new properties();
+	PropertDetailsPage_PO pdp = new PropertDetailsPage_PO();
+	commonFunctions cf = new commonFunctions();
+
+	public By listSRPTab = By.id("com.owners.buyer:id/search_list_view");
+	public By filtersTab = By.id("com.owners.buyer:id/search_filter_view");
+	public By priceInList = By.id("com.owners.buyer:id/search_result_property_price");
+	public By applyFilterButton = By.id("com.owners.buyer:id/property_filters_done_button");
+	public By fiveBedFilter = By.id("com.owners.buyer:id/filter_selection_item_five");
+	public By fourBathFilter = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id, 'search_result_filter_baths_selection')]//android.widget.LinearLayout//android.widget.TextView[contains(@resource-id,'filter_selection_item_four')]");
+	public By priceRangePicker = By.id("com.owners.buyer:id/range_picker_min_text_view");
+	public By secondWheelSelector = By.xpath(
+			"//android.widget.FrameLayout[2]//android.widget.LinearLayout[1]//android.widget.FrameLayout[contains(@resource-id,'wheel_selector_down')]");
+	public By firstWheelSelector = By.id("com.owners.buyer:id/wheel_selector_down");
+	public By saveButton = By.id("android:id/button1");
+	public By accountDialouge = By.id("com.owners.buyer:id/dialog_account_message");
+	public By favIconList = By.id("com.owners.buyer:id/search_result_fav_button");
+	public By listBedBathSqft = By.id("com.owners.buyer:id/search_result_property_textview");
+
+	public void selectAndApplyFilter(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		wait = new WebDriverWait(driver, 20);
+		driver.findElement(filtersTab).click();
+		wait.until(ExpectedConditions.elementToBeClickable(applyFilterButton));
+		driver.findElement(fiveBedFilter).click();
+		driver.findElement(fourBathFilter).click();
+		cf.scrollToText("Price Range", driver);
+		driver.findElement(priceRangePicker).click();
+		Thread.sleep(2000);
+		for (int j = 0; j < 12; j++) {
+			driver.findElement(secondWheelSelector).click();
+		}
+		for (int i = 0; i < 5; i++) {
+			driver.findElement(firstWheelSelector).click();
+		}
+		driver.findElement(saveButton).click();
+		Thread.sleep(2000);
+		driver.findElement(applyFilterButton).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(cf.searchingDialouge));
+	}
+
+	public void validateFiltersApplied(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(cf.searchingDialouge));
+		pr.propertyPriceList = pdp.getProeprtyPriceFromList(driver).replace(",", "");
+		pr.propertyPriceList = pr.propertyPriceList.replace("$", "");
+		System.out.println(pr.propertyPriceList);
+		element = driver.findElement(listBedBathSqft);
+		String propertyDetails[] = cf.countBedBathSqft(element.getText());
+		pr.filterListBeds = Integer.parseInt(propertyDetails[0].replaceAll(" Beds", ""));
+		pr.filterListBaths = Integer.parseInt(propertyDetails[1].replaceAll(" Baths", ""));
+		if (pr.filterListBeds >= 5 && pr.filterListBaths >= 4 && Integer.parseInt(pr.propertyPriceList) >= 250000
+				&& Integer.parseInt(pr.propertyPriceList) < 800000) {
+			System.out.println("Bed count is: " + pr.filterListBeds);
+			System.out.println("Bath count is: " + pr.filterListBaths);
+			System.out.println("Price of the property is :" + pr.propertyPriceList);
+		}
+	}
+
+	public String getProeprtyPriceFromList(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		wait = new WebDriverWait(driver, 20);
+		driver.findElement(listSRPTab).click();
+		Thread.sleep(2000);
+		cf.verticalScrollUpwards(driver);
+		wait.until(ExpectedConditions.presenceOfElementLocated(favIconList));
+		pr.propertyPriceList = driver.findElement(priceInList).getText();
+		return pr.propertyPriceList;
+	}
+}

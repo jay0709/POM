@@ -1,0 +1,16 @@
+package com.favourites.PageFactory;
+
+import org.openqa.selenium.By;
+
+public class PDP_PO {
+
+	public By imageCountInPDP = By.id("com.owners.buyer:id/property_photos_num_text_view");
+	public By pdpGalleryFavIncon = By.id("com.owners.buyer:id/property_photos_fav_button");
+	public By pdpGalleryRequestTour = By.id("com.owners.buyer:id/pdp_gallery_contact_seller");
+	public By pdpGalleryPropertyPrice = By.id("com.owners.buyer:id/property_details_request_tour_price");
+	public By pdpGalleryDeleteImage = By.id("com.owners.buyer:id/property_details_gallery_note_image_delete");
+	public By pdpGalleryNote = By.id("com.owners.buyer:id/note_image_text");
+	public By pdpGalleryImageCount = By.id("com.owners.buyer:id/property_photos_num_text_view");
+	public By pdpGalleryBackButton = By.id("com.owners.buyer:id/property_photos_back_button");
+
+}

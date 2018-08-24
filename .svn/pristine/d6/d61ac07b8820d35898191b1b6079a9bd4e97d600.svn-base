@@ -1,0 +1,99 @@
+package com.favourites.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class AddAssetForPDP {
+
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+	FavTabID_PO ft = new FavTabID_PO();
+	FavoritesTab_PO ftpo = new FavoritesTab_PO();
+	EditDeleteAssest_PO ed = new EditDeleteAssest_PO();
+	PDP_PO pdp = new PDP_PO();
+
+	public void addDeleteMultilineNotes(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.relaunchApp(driver);
+		driver.findElement(ft.clickFavouriteTab).click();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		Thread.sleep(2000);
+		driver.findElement(ft.editTextField).click();
+		ftpo.confirmDisclaimer(driver);
+		driver.findElement(ft.editTextField).sendKeys(
+				"In Word 2013 or Word 2010, on the Review tab, in the Tracking group, in the Show Markup list, choose Comments and make sure a check mark in a box appears next to the option. Choose Comments again to clear the check mark and hide comments.");
+		driver.hideKeyboard();
+		driver.findElement(ft.saveAssetButton).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(ft.sendTextProgressBar));
+		System.out.println("Multiline asset addition completed..");
+		String multilineComment = driver.findElement(ft.commentTextView).getText();
+		if (multilineComment.contains("...")) {
+			System.out.println(
+					driver.findElement(ft.commentTextView).getText() + "\n multiline comment added successfully..");
+		}
+
+		driver.findElement(ft.showAllText).click();
+		Thread.sleep(3000);
+		String multilineCommentExpanded = driver.findElement(ft.commentTextView).getText();
+		System.out.println("Multilne comment is: " + multilineCommentExpanded);
+		driver.findElement(ft.commentTextView).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ft.commentdeleteButtonInEditPage));
+		driver.findElement(ft.commentdeleteButtonInEditPage).click();
+		driver.findElement(ft.delteNoteDeleteButton).click();
+	}
+
+	public void addImageToViewInPDP(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		cf.relaunchApp(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(ft.clickFavouriteTab));
+		driver.findElement(ft.clickFavouriteTab).click();
+		Thread.sleep(3000);
+		ftpo.swipePhotosInFavourite(driver);
+		int totalImageCountInFavTab = Integer
+				.parseInt(driver.findElement(ft.imageConatinerPhotoCount).getText().split("/")[1]);
+		System.out.println("Total Image before adding : " + totalImageCountInFavTab);
+		ed.addImageAssetFromCamera(driver);
+		driver.findElement(ft.favPropertyPrice).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.imageCountInPDP));
+		int totalImageCountInPDP = Integer.parseInt(driver.findElement(pdp.imageCountInPDP).getText().split("/")[1]);
+		System.out.println("Totale Image count in PDP : " + totalImageCountInFavTab);
+		if (totalImageCountInFavTab > totalImageCountInPDP)
+			System.out.println("Image count updated from " + totalImageCountInFavTab + " to " + totalImageCountInPDP);
+		driver.findElement(pdp.imageCountInPDP).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryFavIncon));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryRequestTour));
+		cf.scrollToText("User Photos", driver);
+		driver.findElement(pdp.pdpGalleryPropertyPrice).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryNote));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pdp.pdpGalleryDeleteImage));
+		int imageCountBeforeDelete = Integer.parseInt(driver.findElement(pdp.pdpGalleryImageCount).getText().substring(
+				driver.findElement(pdp.pdpGalleryImageCount).getText().length() - 2,
+				driver.findElement(pdp.pdpGalleryImageCount).getText().length() - 1));
+		driver.findElement(pdp.pdpGalleryDeleteImage).click();
+		Thread.sleep(5000);
+		// Assert.assertEquals(imageCountBeforeDelete - 1, totalImageCountInPDP,
+		// "Image is deleted form PDP gallery..!");
+		driver.findElement(pdp.pdpGalleryBackButton).click();
+		Thread.sleep(2000);
+		driver.findElement(pdp.pdpGalleryBackButton).click();
+		Assert.assertEquals(totalImageCountInPDP, totalImageCountInPDP - 1,
+				"Image count updated in the PDP header as well..!!");
+		System.out.println("Total image count in PDP after delete image : " + (totalImageCountInPDP - 1));
+
+	}
+}

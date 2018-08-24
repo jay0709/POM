@@ -1,0 +1,72 @@
+package com.owners.OpenHouse;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.openhouse.PageFactory.OpenHouse_PO;
+import com.owners.commonFunctions;
+import com.owners.desiredCapabilities;
+import com.owners.PageFactory.DiscoverTab_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class OpenHouseInSRP {
+	desiredCapabilities dc = new desiredCapabilities();
+	AndroidDriver<AndroidElement> driver;
+	WebDriverWait wait;
+	DiscoverTab_PO dt;
+	commonFunctions cf = new commonFunctions();
+	OpenHouse_PO oh = new OpenHouse_PO();
+
+	@BeforeTest
+	public void beforeTest() throws MalformedURLException, InterruptedException {
+		dt = new DiscoverTab_PO();
+		dc.forAndroidTab();
+		driver = dc.getAndroidDriver();
+		wait = dc.getWebDriverWait();
+	}
+
+	@Test(priority = 1)
+	public void verifyOpenHousePropertyInSRP() throws InterruptedException, IOException {
+
+		// search for Atlanta, GA
+		cf.searchMapSRP("Atlanta,GA", driver);
+
+		// Enable open house
+		oh.turnOnOpenHouseFilter(driver);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(cf.searchingDialouge));
+
+		// verify open house in SRP
+		driver.findElement(oh.srpListBtn).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(cf.searchingDialouge));
+		// cf.verticalScrollUpwards(driver);
+		String openText = driver.findElement(oh.openTextInSRP).getText();
+		Assert.assertEquals(openText, "OPEN", "Open house filter applied..");
+		System.out.println("Open house timings : " + driver.findElement(oh.openTimeInSRP).getText());
+	}
+
+	@Test(priority = 2)
+	public void saveOpenHouseFromPDP() throws InterruptedException, IOException {
+		oh.openHouseDateVerify(driver);
+		oh.openHouseTimeVerify(driver);
+		oh.saveOpenHouse(driver);
+	}
+
+	@Test(priority = 3)
+	public void viewOpenHouseInMeSection() throws InterruptedException, IOException {
+
+	}
+
+	@AfterTest
+	public void afterTest() {
+		driver.quit();
+	}
+}

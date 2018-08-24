@@ -1,0 +1,173 @@
+package com.openhouse.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class OpenHouseInMapView_PO {
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+	OpenHouse_PO oh = new OpenHouse_PO();
+
+	public By openHouseTextInQuickView = By.id("com.owners.buyer:id/search_result_open_house");
+	public By openHouseTimeInQuickView = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By openHouseHeaderTime = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By openHouseDate = By.id("com.owners.buyer:id/tv_open_house_date");
+	public By openHouseTime = By.id("com.owners.buyer:id/tv_open_house_time");
+	public By newTagInSRPView = By.id("com.owners.buyer:id/search_result_new");
+	public By favIconInQuickView = By.id("com.owners.buyer:id/search_item_fav_button");
+	public By srpListBtn = By.id("com.owners.buyer:id/search_list_view");
+	public By srpSwipeBtn = By.id("com.owners.buyer:id/search_swipe_view");
+
+	public By searchingDialouge = By.id("com.owners.buyer:id/dialog_account_message");
+	public By onboarding_alertTitle = By.id("com.owners.buyer:id/no_result_error");
+
+	public void openHouseDateVerify(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		cf.verticalScrollUpwards(driver);
+		String srpDate = driver.findElement(openHouseTimeInQuickView).getText().toLowerCase();
+		String[] dateSRP = srpDate.split(",");
+		System.out
+				.println("Open House details in Quick View: " + driver.findElement(openHouseTimeInQuickView).getText());
+		driver.findElement(openHouseTimeInQuickView).click();
+		Thread.sleep(10000);
+		cf.verticalScrollUpwards(driver);
+		String pdpDate = driver.findElement(openHouseHeaderTime).getText().toLowerCase();
+		String[] datePDP = pdpDate.split(",");
+		Assert.assertEquals(dateSRP[0], datePDP[0], "Open House DATE is not matching");
+		System.out.println("Open house date is verified..!");
+	}
+
+	public void openHouseTimeVerify(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		String pdpTime = driver.findElement(openHouseHeaderTime).getText().toLowerCase();
+		String timePDP = pdpTime.substring(pdpTime.indexOf(",") + 2, pdpTime.indexOf("-")).trim().toLowerCase();
+		cf.scrollToText("SAVE TO OPEN HOUSE SCHEDULE", driver);
+		String sectionTime = driver.findElement(openHouseTime).getText().toLowerCase();
+		String[] timeSection = sectionTime.split("-");
+		Assert.assertEquals(timePDP, timeSection[0], "Open House Time is not matching");
+		System.out.println("** Open house date is: " + driver.findElement(openHouseDate).getText().toUpperCase());
+		System.out.println("** Open house time is: " + sectionTime.toUpperCase());
+		System.out.println("Open house time is verified..!");
+	}
+
+	public void newTagInQuickSRP(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		cf.fromClusterToPinView(driver);
+		Thread.sleep(2000);
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(newTagInSRPView));
+			System.out.println("New Tag Available in Quick View..!");
+			String newTag = driver.findElement(newTagInSRPView).getText();
+			if (newTag.length() < 4)
+				System.out.println("Only new string is available..!");
+			else {
+				String time = newTag.substring(3, newTag.length());
+				if (time.contains("M")) {
+					time = time.replace("M", "MINUTE(S)");
+					System.out.println("Property has been onboarded" + time);
+				} else if (time.contains("H")) {
+					time = time.replace("H", "HOUR(S)");
+					System.out.println("Property has been onboarded" + time);
+				} else {
+					time = time.replace("D", "DAY(S)");
+					System.out.println("Property has been onboarded" + time);
+				}
+			}
+		} catch (Exception e1) {
+			System.out.println("This property is onboarded beyond 7 Days..!");
+		}
+
+	}
+
+	public void newTagInListSRP(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		Thread.sleep(2000);
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(newTagInSRPView));
+			System.out.println("New Tag Available in List View..!");
+			String newTag = driver.findElement(newTagInSRPView).getText();
+			if (newTag.length() < 4)
+				System.out.println("Only new string is available..!");
+			else {
+				String time = newTag.substring(3, newTag.length());
+				if (time.contains("M")) {
+					time = time.replace("M", "MINUTE(S)");
+					System.out.println("Property has been onboarded" + time);
+				} else if (time.contains("H")) {
+					time = time.replace("H", "HOUR(S)");
+					System.out.println("Property has been onboarded" + time);
+				} else {
+					time = time.replace("D", "DAY(S)");
+					System.out.println("Property has been onboarded" + time);
+				}
+			}
+		} catch (Exception e1) {
+			System.out.println("This property is onboarded beyond 7 Days..!");
+		}
+
+	}
+
+	public void newTagInSwipeSRP(AndroidDriver<AndroidElement> driver) throws InterruptedException {
+		Thread.sleep(2000);
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(newTagInSRPView));
+			System.out.println("New Tag Available in Swipe View..!");
+			String newTag = driver.findElement(newTagInSRPView).getText();
+			if (newTag.length() < 4)
+				System.out.println("Only new string is available..!");
+			else {
+				String time = newTag.substring(3, newTag.length());
+				if (time.contains("M")) {
+					time = time.replace("M", "MINUTE(S)");
+					System.out.println("Property has been onboarded" + time);
+				} else if (time.contains("H")) {
+					time = time.replace("H", "HOUR(S)");
+					System.out.println("Property has been onboarded" + time);
+				} else {
+					time = time.replace("D", "DAY(S)");
+					System.out.println("Property has been onboarded" + time);
+				}
+			}
+		} catch (Exception e1) {
+			System.out.println("This property is onboarded beyond 7 Days..!");
+		}
+
+	}
+
+	public void newPropertiesWithOpenHouse(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		cf.searchMapSRP("Atlanta,GA", driver);
+		Thread.sleep(5000);
+		wait = new WebDriverWait(driver, 10);
+		oh.lessSevenDaysFilterWithOpenHouse(driver);
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(onboarding_alertTitle));
+			System.out.println("No open house properties available in search area which are onboarded withing 7 Days");
+		} catch (Exception e) {
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(searchingDialouge));
+			newTagInQuickSRP(driver);
+			driver.findElement(srpListBtn).click();
+			Thread.sleep(2000);
+			newTagInListSRP(driver);
+			driver.findElement(srpSwipeBtn).click();
+			Thread.sleep(3000);
+			newTagInSwipeSRP(driver);
+
+		}
+	}
+
+}

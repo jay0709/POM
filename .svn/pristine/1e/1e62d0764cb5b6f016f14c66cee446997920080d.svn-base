@@ -1,0 +1,26 @@
+<h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>Default suite</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table border="1">
+<tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:17:02</td>   <td>0</td> <td>&nbsp;</td><td title="&gt;&gt;UserRegistration.beforeTest()[pri:0, instance:com.owners.Scripts.UserRegistration@59494225]">&gt;&gt;beforeTest</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:17:14</td>   <td>12268</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.OwnersApp_NewUserRegistration()[pri:1, instance:com.owners.Scripts.UserRegistration@59494225]">OwnersApp_NewUserRegistration</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:18:39</td>   <td>97038</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.OwnersApp_LogOut()[pri:2, instance:com.owners.Scripts.UserRegistration@59494225]">OwnersApp_LogOut</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:18:50</td>   <td>108124</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.OwnersApp_Login()[pri:3, instance:com.owners.Scripts.UserRegistration@59494225]">OwnersApp_Login</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:19:50</td>   <td>168196</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.OwnersApp_UserRegistrationFilters()[pri:4, instance:com.owners.Scripts.UserRegistration@59494225]">OwnersApp_UserRegistrationFilters</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:22:02</td>   <td>300487</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.OwnersApp_SRPuiValidationAndToggleViews()[pri:5, instance:com.owners.Scripts.UserRegistration@59494225]">OwnersApp_SRPuiValidationAndToggleViews</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:23:21</td>   <td>379288</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.FavouritePorpertyValidation()[pri:6, instance:com.owners.Scripts.UserRegistration@59494225]">FavouritePorpertyValidation</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:24:21</td>   <td>439457</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.ValidatePDPComponents()[pri:7, instance:com.owners.Scripts.UserRegistration@59494225]">ValidatePDPComponents</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:26:43</td>   <td>581068</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.ValidationDiscoverTabComponents()[pri:8, instance:com.owners.Scripts.UserRegistration@59494225]">ValidationDiscoverTabComponents</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:27:11</td>   <td>609164</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="UserRegistration.SearchFilterValidation()[pri:9, instance:com.owners.Scripts.UserRegistration@59494225]">SearchFilterValidation</td> 
+  <td>main@1900164709</td>   <td></td> </tr>
+<tr bgcolor="6dabbc">  <td>17/06/20 02:29:36</td>   <td>754103</td> <td>&nbsp;</td><td title="&lt;&lt;UserRegistration.afterTest()[pri:0, instance:com.owners.Scripts.UserRegistration@59494225]">&lt;&lt;afterTest</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1900164709</td>   <td></td> </tr>
+</table>

@@ -1,0 +1,60 @@
+<table border='1'>
+<tr>
+<th>Class name</th>
+<th>Method name</th>
+<th>Groups</th>
+</tr><tr>
+<td>com.owners.Scripts.SanitySuite</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>FavouritePorpertyValidation</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>OwnersApp_NewUserRegistration</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>SearchFilterValidation</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>OwnersApp_SRPuiValidationAndToggleViews</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>ValidatePDPComponents</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>OwnersApp_LogOut</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>ValidationDiscoverTabComponents</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>OwnersApp_UserRegistrationFilters</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>OwnersApp_Login</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+</table>

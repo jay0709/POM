@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Failed suite [Failed suite [Failed suite [Default suite]]]</th></tr>
+<tr><td><a href="#t0">Default test(failed)(failed)(failed)</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">68,711</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Failed suite [Failed suite [Failed suite [Default suite]]]</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test(failed)(failed)(failed) &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.owners.OpenHouse.OpenHouseInSRP</td><td><a href="#m0">pinViewFromCluster</a></td><td rowspan="1">1512739365277</td><td rowspan="1">48416</td></tr></tbody>
+</table>
+<h2>Default test(failed)(failed)(failed)</h2><h3 id="m0">com.owners.OpenHouse.OpenHouseInSRP#pinViewFromCluster</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 281 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 808a55bb-f865-47cc-ba14-7b4161572779
+*** Element info: {Using=id, value=com.owners.buyer:id/property_filters_clear_button}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.openhouse.PageFactory.OpenHouse_PO.turnOnOpenHouseFilter(OpenHouse_PO.java:68)
+	at com.openhouse.PageFactory.OpenHouse_PO.pinView(OpenHouse_PO.java:163)
+	at com.owners.OpenHouse.OpenHouseInSRP.pinViewFromCluster(OpenHouseInSRP.java:143)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

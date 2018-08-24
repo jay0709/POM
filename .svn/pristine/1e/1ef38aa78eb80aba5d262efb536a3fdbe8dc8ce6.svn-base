@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">20 methods, 1 failed,   19 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="newTagWithOpenHouseQuickSRP">newTagWithOpenHouseQuickSRP</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="addCalendarEventFromOpenHouse">addCalendarEventFromOpenHouse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="copyAddressOptionVerify_PDPOpen">copyAddressOptionVerify_PDPOpen</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="deleteOpenHouseFromMenu">deleteOpenHouseFromMenu</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="discoverPageOpenHose">discoverPageOpenHose</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="getDirectionFromOpenhouse">getDirectionFromOpenhouse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="matchDataInPDPWithDiscovertab">matchDataInPDPWithDiscovertab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="openHouseAddressVerify">openHouseAddressVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="pinViewFromCluster">pinViewFromCluster</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="saveOpenHouseFromPDP">saveOpenHouseFromPDP</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="scheduleTourFromOpenHouse">scheduleTourFromOpenHouse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="searchStateNotChanged">searchStateNotChanged</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="swipeViewOpenHouse">swipeViewOpenHouse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="tagAndTimeVerifyInDiscover">tagAndTimeVerifyInDiscover</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="unauthenticatedUserOpenHouseVerify">unauthenticatedUserOpenHouseVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="updateOpenHouseListInDiscoverTab">updateOpenHouseListInDiscoverTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="verifyFavIconDisappear">verifyFavIconDisappear</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="verifyFavIconInTiles">verifyFavIconInTiles</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="verifyOpenHousePropertyInSRP">verifyOpenHousePropertyInSRP</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="viewOpenHouseInMeSection">viewOpenHouseInMeSection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.owners.OpenHouse.OpenHouseInSRP</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="newTagWithOpenHouseQuickSRP">
+                  </a> <!-- newTagWithOpenHouseQuickSRP -->
+                  <span class="method-name">newTagWithOpenHouseQuickSRP</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.66 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.owners.buyer, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=01ab1dc9259a7def, platform=LINUX, deviceUDID=01ab1dc9259a7def, appActivity=com.owners.buyer.MainActivity, desired={appPackage=com.owners.buyer, appActivity=com.owners.buyer.MainActivity, appium-version=1.6.4, noReset=true, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HubzuSM-T311}, appium-version=1.6.4, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 39baacfe-dfbb-4543-a484-429dc8c86a03
+*** Element info: {Using=id, value=com.owners.buyer:id/filter_toggle_switch}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.openhouse.PageFactory.OpenHouse_PO.lessSevenDaysFilterWithOpenHouse(OpenHouse_PO.java:172)
+	at com.openhouse.PageFactory.OpenHouseInMapView_PO.newPropertiesWithOpenHouse(OpenHouseInMapView_PO.java:156)
+	at com.owners.OpenHouse.OpenHouseInSRP.newTagWithOpenHouseQuickSRP(OpenHouseInSRP.java:153)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.owners.OpenHouse.OpenHouseInSRP</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addCalendarEventFromOpenHouse">
+                  </a> <!-- addCalendarEventFromOpenHouse -->
+                  <span class="method-name">addCalendarEventFromOpenHouse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="copyAddressOptionVerify_PDPOpen">
+                  </a> <!-- copyAddressOptionVerify_PDPOpen -->
+                  <span class="method-name">copyAddressOptionVerify_PDPOpen</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteOpenHouseFromMenu">
+                  </a> <!-- deleteOpenHouseFromMenu -->
+                  <span class="method-name">deleteOpenHouseFromMenu</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="discoverPageOpenHose">
+                  </a> <!-- discoverPageOpenHose -->
+                  <span class="method-name">discoverPageOpenHose</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getDirectionFromOpenhouse">
+                  </a> <!-- getDirectionFromOpenhouse -->
+                  <span class="method-name">getDirectionFromOpenhouse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="matchDataInPDPWithDiscovertab">
+                  </a> <!-- matchDataInPDPWithDiscovertab -->
+                  <span class="method-name">matchDataInPDPWithDiscovertab</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openHouseAddressVerify">
+                  </a> <!-- openHouseAddressVerify -->
+                  <span class="method-name">openHouseAddressVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pinViewFromCluster">
+                  </a> <!-- pinViewFromCluster -->
+                  <span class="method-name">pinViewFromCluster</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="saveOpenHouseFromPDP">
+                  </a> <!-- saveOpenHouseFromPDP -->
+                  <span class="method-name">saveOpenHouseFromPDP</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="scheduleTourFromOpenHouse">
+                  </a> <!-- scheduleTourFromOpenHouse -->
+                  <span class="method-name">scheduleTourFromOpenHouse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchStateNotChanged">
+                  </a> <!-- searchStateNotChanged -->
+                  <span class="method-name">searchStateNotChanged</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="swipeViewOpenHouse">
+                  </a> <!-- swipeViewOpenHouse -->
+                  <span class="method-name">swipeViewOpenHouse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tagAndTimeVerifyInDiscover">
+                  </a> <!-- tagAndTimeVerifyInDiscover -->
+                  <span class="method-name">tagAndTimeVerifyInDiscover</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unauthenticatedUserOpenHouseVerify">
+                  </a> <!-- unauthenticatedUserOpenHouseVerify -->
+                  <span class="method-name">unauthenticatedUserOpenHouseVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateOpenHouseListInDiscoverTab">
+                  </a> <!-- updateOpenHouseListInDiscoverTab -->
+                  <span class="method-name">updateOpenHouseListInDiscoverTab</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFavIconDisappear">
+                  </a> <!-- verifyFavIconDisappear -->
+                  <span class="method-name">verifyFavIconDisappear</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFavIconInTiles">
+                  </a> <!-- verifyFavIconInTiles -->
+                  <span class="method-name">verifyFavIconInTiles</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOpenHousePropertyInSRP">
+                  </a> <!-- verifyOpenHousePropertyInSRP -->
+                  <span class="method-name">verifyOpenHousePropertyInSRP</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="viewOpenHouseInMeSection">
+                  </a> <!-- viewOpenHouseInMeSection -->
+                  <span class="method-name">viewOpenHouseInMeSection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/private/var/folders/dc/4cxwlky12130hd_c16x5_00c0000gq/T/testng-eclipse-884397690/testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.owners.OpenHouse.OpenHouseInSRP&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(20);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'pinViewFromCluster')
+data.setCell(0, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(0, 3, 87001);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'discoverPageOpenHose')
+data.setCell(1, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(1, 3, 78476);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'unauthenticatedUserOpenHouseVerify')
+data.setCell(2, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(2, 3, 74920);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'searchStateNotChanged')
+data.setCell(3, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(3, 3, 70534);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyOpenHousePropertyInSRP')
+data.setCell(4, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(4, 3, 55810);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'newTagWithOpenHouseQuickSRP')
+data.setCell(5, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(5, 3, 51531);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'saveOpenHouseFromPDP')
+data.setCell(6, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(6, 3, 42056);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'updateOpenHouseListInDiscoverTab')
+data.setCell(7, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(7, 3, 36623);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'addCalendarEventFromOpenHouse')
+data.setCell(8, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(8, 3, 29681);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'getDirectionFromOpenhouse')
+data.setCell(9, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(9, 3, 29353);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'deleteOpenHouseFromMenu')
+data.setCell(10, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(10, 3, 28322);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'scheduleTourFromOpenHouse')
+data.setCell(11, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(11, 3, 26898);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'swipeViewOpenHouse')
+data.setCell(12, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(12, 3, 26285);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'openHouseAddressVerify')
+data.setCell(13, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(13, 3, 20885);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'matchDataInPDPWithDiscovertab')
+data.setCell(14, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(14, 3, 10870);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'copyAddressOptionVerify_PDPOpen')
+data.setCell(15, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(15, 3, 9177);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyFavIconDisappear')
+data.setCell(16, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(16, 3, 8956);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'tagAndTimeVerifyInDiscover')
+data.setCell(17, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(17, 3, 5766);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyFavIconInTiles')
+data.setCell(18, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(18, 3, 2545);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'viewOpenHouseInMeSection')
+data.setCell(19, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(19, 3, 1103);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 11 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.owners.OpenHouse.OpenHouseInSRP</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">verifyOpenHousePropertyInSRP</span>
+                <span class="method-start">8126 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">saveOpenHouseFromPDP</span>
+                <span class="method-start">63939 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">viewOpenHouseInMeSection</span>
+                <span class="method-start">105997 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">openHouseAddressVerify</span>
+                <span class="method-start">107102 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">copyAddressOptionVerify_PDPOpen</span>
+                <span class="method-start">127989 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">scheduleTourFromOpenHouse</span>
+                <span class="method-start">137167 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getDirectionFromOpenhouse</span>
+                <span class="method-start">164067 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addCalendarEventFromOpenHouse</span>
+                <span class="method-start">193421 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteOpenHouseFromMenu</span>
+                <span class="method-start">223104 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">discoverPageOpenHose</span>
+                <span class="method-start">251427 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">swipeViewOpenHouse</span>
+                <span class="method-start">329905 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pinViewFromCluster</span>
+                <span class="method-start">356191 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">newTagWithOpenHouseQuickSRP</span>
+                <span class="method-start">443193 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchStateNotChanged</span>
+                <span class="method-start">495262 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">tagAndTimeVerifyInDiscover</span>
+                <span class="method-start">565797 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">matchDataInPDPWithDiscovertab</span>
+                <span class="method-start">571564 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyFavIconInTiles</span>
+                <span class="method-start">582435 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyFavIconDisappear</span>
+                <span class="method-start">584981 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateOpenHouseListInDiscoverTab</span>
+                <span class="method-start">593939 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">unauthenticatedUserOpenHouseVerify</span>
+                <span class="method-start">630564 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">705485 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

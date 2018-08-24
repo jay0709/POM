@@ -1,0 +1,60 @@
+package com.openhouse.PageFactory;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.owners.commonFunctions;
+import com.owners.properties;
+import com.owners.PageFactory.Registration_PO;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class OpenHouseInMapView_PO {
+	AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	Registration_PO reg = new Registration_PO();
+	properties pr = new properties();
+
+	public By openHouseTextInQuickView = By.id("com.owners.buyer:id/search_result_open_house");
+	public By openHouseTimeInQuickView = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By openHouseHeaderTime = By.id("com.owners.buyer:id/search_result_open_house_time");
+	public By openHouseDate = By.id("com.owners.buyer:id/tv_open_house_date");
+	public By openHouseTime = By.id("com.owners.buyer:id/tv_open_house_time");
+	public By newTagInQuickView = By.id("com.owners.buyer:id/search_result_new");
+
+	public void openHouseDateVerify(AndroidDriver<AndroidElement> driver)
+			throws InterruptedException, MalformedURLException {
+		cf.verticalScrollUpwards(driver);
+		String srpDate = driver.findElement(openHouseTimeInQuickView).getText().toLowerCase();
+		String[] dateSRP = srpDate.split(",");
+		System.out
+				.println("Open House details in Quick View: " + driver.findElement(openHouseTimeInQuickView).getText());
+		driver.findElement(openHouseTimeInQuickView).click();
+		Thread.sleep(10000);
+		cf.verticalScrollUpwards(driver);
+		String pdpDate = driver.findElement(openHouseHeaderTime).getText().toLowerCase();
+		String[] datePDP = pdpDate.split(",");
+		Assert.assertEquals(dateSRP[0], datePDP[0], "Open House DATE is not matching");
+		System.out.println("Open house date is verified..!");
+	}
+
+	public void openHouseTimeVerify(AndroidDriver<AndroidElement> driver)
+			throws MalformedURLException, InterruptedException {
+		String pdpTime = driver.findElement(openHouseHeaderTime).getText().toLowerCase();
+		String timePDP = pdpTime.substring(pdpTime.indexOf(",") + 2, pdpTime.indexOf("-")).trim().toLowerCase();
+		cf.scrollToText("SAVE TO OPEN HOUSE SCHEDULE", driver);
+		String sectionTime = driver.findElement(openHouseTime).getText().toLowerCase();
+		String[] timeSection = sectionTime.split("-");
+		Assert.assertEquals(timePDP, timeSection[0], "Open House Time is not matching");
+		System.out.println("** Open house date is: " + driver.findElement(openHouseDate).getText().toUpperCase());
+		System.out.println("** Open house time is: " + sectionTime.toUpperCase());
+		System.out.println("Open house time is verified..!");
+	}
+}

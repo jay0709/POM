@@ -1,0 +1,103 @@
+package com.owners.PageFactory;
+
+import org.openqa.selenium.By;
+
+public class Registration_PO {
+	public By onboarding_SearchBoxDefaultText = By.id("com.owners.buyer:id/onboarding_search_title");
+	public By onboarding_SkipLink = By.id("com.owners.buyer:id/onboarding_skip");
+	public By onboarding_SuggestionSearchBox = By.id("com.owners.buyer:id/search_suggestion_search");
+	public By onboarding_SearchSuggestion1 = By
+			.xpath("//android.widget.FrameLayout[contains(@resource-id,'suggestion_root_view') and @index='0']");
+	public By onboarding_SearchSuggestion3 = By
+			.xpath("//android.widget.FrameLayout[contains(@resource-id,'suggestion_root_view') and @index='2']");
+	public By onboarding_SearchSuggestion1City = By.xpath(
+			"//android.support.v7.widget.RecyclerView/android.widget.FrameLayout[1]//android.widget.TextView[1]");
+	public By onboarding_SearchSuggestion1State = By.xpath(
+			"//android.support.v7.widget.RecyclerView/android.widget.FrameLayout[1]//android.widget.TextView[2]");
+	public By onboarding_SearchSuggestionSnippet = By.id("com.owners.buyer:id/suggestion_root_view");
+	public By onboarding_FiltersPageText1 = By.xpath("//android.widget.TextView[@index='1']");
+	public By onboarding_FiltersPageText2 = By.id("com.owners.buyer:id/textView6");
+	public By onboarding_FilterMaxPriceDownArrow = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'onboarding_max_price_list')]//android.widget.FrameLayout[contains(@resource-id,'wheel_selector_down')]");
+	public By onboarding_FilterMaxPriceUPArrow = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'onboarding_max_price_list')]//android.widget.FrameLayout[contains(@resource-id,'wheel_selector_up')]");
+	public By onboarding_SetMaxPrice = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'onboarding_max_price_list')]//android.widget.TextView[2]");
+	public By onboarding_FilterMinPriceDownArrow = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'onboarding_min_price_list')]//android.widget.FrameLayout[contains(@resource-id,'wheel_selector_down')]");
+	public By onboarding_SetMinPrice = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'onboarding_min_price_list')]//android.widget.TextView[2]");
+	public By onboarding_NextBtnToBedBath = By.id("com.owners.buyer:id/page_navigation_next_icon");
+	public By onboarding_SetMinBath = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'search_result_filter_baths_selection')]//android.widget.TextView[contains(@resource-id,'filter_selection_item_four')]");
+	public By onboarding_SetMinBed = By.id("com.owners.buyer:id/filter_selection_item_three");
+	public By onboarding_NextToSaveSearch = By.id("com.owners.buyer:id/page_navigation_next_label");
+	public By onboarding_SaveSearchText1 = By.xpath("//android.support.v4.view.ViewPager//android.widget.TextView[1]");
+	public By onboarding_SaveSearchText2 = By.id("com.owners.buyer:id/onboarding_sign_in_to_save_label");
+	public By onboarding_SaveSearchLocation = By.id("com.owners.buyer:id/onboarding_search_name");
+	public By onboarding_SaveSearchPriceFilters = By.id("com.owners.buyer:id/onboarding_search_filters");
+	public By onboarding_SignInToSaveBtn = By.id("com.owners.buyer:id/onboarding_sign_in_to_save");
+	public By onboarding_UsernameTextBox = By.id("com.owners.buyer:id/account_user_email");
+
+	public By onboarding_PasswordTextBox = By.id("com.owners.buyer:id/account_user_password");
+	public By onboarding_SignInBtn = By.id("com.owners.buyer:id/login_login_button");
+	public By onboarding_SendSurveyBtn = By.id("com.owners.buyer:id/onboarding_survey_send");
+	public By onboarding_SurveyPageText = By.xpath("//android.widget.TextView");
+	public By onboarding_SurveySkipLink = By.id("com.owners.buyer:id/onboarding_survey_skip");
+	public By onboarding_alertTitle = By.id("com.owners.buyer:id/no_result_error");
+	public By onboarding_alertMessageText1 = By.id("android:id/message");
+	public By onboarding_alertOKbtn = By.id("android:id/button1");
+	public By SRP_FilterCount = By.id("com.owners.buyer:id/search_result_subtitle_text_view");
+	public By onboarding_PriceRangeLink = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'filter_price_range_picker')]//android.widget.LinearLayout[contains(@resource-id, 'range_picker_click')]");
+	public By onboarding_PriceRangePickerTitle = By.id("com.owners.buyer:id/alertTitle");
+	public By onboarding_PickerMaxPriceDownArrow = By
+			.xpath("//android.widget.FrameLayout[2]//android.widget.LinearLayout[1]//android.widget.FrameLayout[3]");
+	public By onboarding_PickerNewMaxPrice = By.xpath(
+			"//android.widget.FrameLayout[contains(@resource-id,'filter_range_to')]//android.widget.TextView[2]");
+	public By onboarding_PricePickerSaveBtn = By.id("android:id/button1");
+	public By onboarding_FilertsMacSetValue = By.id("com.owners.buyer:id/range_picker_max_text_view");
+	public By onboarding_FilertsDoneBtn = By.id("com.owners.buyer:id/property_filters_done_button");
+	public By onboarding_SRPsetFilters = By.id("com.owners.buyer:id/search_result_filter_title_view");
+	public By onboarding_SRPlistViewBtn = By.id("com.owners.buyer:id/search_list_view");
+	public By onboarding_SRPsavedBtn = By.id("com.owners.buyer:id/search_result_save_search");
+	public By onboarding_SRPsavedBtnText = By.id("com.owners.buyer:id/search_result_save_search_text_view");
+	public By onboarding_SRPpropertyPrice = By.id("com.owners.buyer:id/search_result_property_price");
+	public By onboarding_SRPpropertyBedBathCount = By.id("com.owners.buyer:id/search_result_property_textview");
+	public By onboarding_SRPpropertyLocation = By.id("com.owners.buyer:id/search_result_property_address");
+	public By onboarding_SRPLocationTargetBtn = By.id("com.owners.buyer:id/search_result_location_button");
+	public By onboarding_SRPsortBtn = By.id("com.owners.buyer:id/search_result_sort_text_view");
+	public By onboarding_SRPpassBtn1 = By.xpath(
+			"//android.widget.LinearLayout[contain(@resource-id,'search_card_pass_button')]/android.widget.TextView");
+	public By onboarding_SRPpassBtn2 = By.id("com.owners.buyer:id/search_card_pass_button");
+	public By onboarding_SRPpassBtn = By.xpath("//*[contains(@text,'PASS')]");
+	public By onboarding_filtersClearAllLink = By.id("com.owners.buyer:id/property_filters_clear_button");
+	public By onboarding_CancelfiltersBtn = By.id("com.owners.buyer:id/property_filters_back_button");
+
+	public By onboarding_SRPfavoriteBtn = By.id("com.owners.buyer:id/search_result_fav_button");
+
+	public By onboarding_SignInTabFooter = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[5]//android.widget.LinearLayout");
+	public By onboarding_RegisterBtn = By.id("com.owners.buyer:id/login_register_button");
+	public By onboarding_RegnFirstName = By.id("com.owners.buyer:id/register_user_firstname");
+	public By onboarding_RegnLastName = By.id("com.owners.buyer:id/register_user_lastname");
+	public By onboarding_RegnEmail = By.id("com.owners.buyer:id/account_user_email");
+	public By onboarding_RegnPassword = By.id("com.owners.buyer:id/account_user_password");
+	public By onboarding_RegnRegisterBtn = By.id("com.owners.buyer:id/login_register_button");
+	public By onboarding_RegnMeBtn = By
+			.xpath("//android.support.v7.app.ActionBar.Tab[5]//android.widget.LinearLayout/android.widget.TextView");
+	public By onboarding_RegnUsrName = By.id("com.owners.buyer:id/account_header_user_name");
+	public By onboarding_RegnEmailId = By.id("com.owners.buyer:id/account_header_user_email");
+	public By onboarding_SignOutLink = By.xpath("//android.widget.TextView[contains(@text,'Sign Out')]");
+	public By signOutConfirmMsg = By.id("android:id/message");
+	public By signOutCancelBtn = By.id("android:id/button2");
+	public By signOutOkBtn = By.id("android:id/button1");
+	public By footerSignInBtn = By.xpath("//android.support.v7.app.ActionBar.Tab[5]");
+	public By footerSignInBtnTxt = By.xpath("//android.support.v7.app.ActionBar.Tab[5]//android.widget.TextView");
+
+	public By srpMapBtn = By.id("com.owners.buyer:id/search_map_view");
+	public By srpListBtn = By.id("com.owners.buyer:id/search_list_view");
+	public By srpSwipeBtn = By.id("com.owners.buyer:id/search_swipe_view");
+	public By filtersLink = By.id("com.owners.buyer:id/search_result_filter_title_view");
+
+}

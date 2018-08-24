@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+              <span class="suite-name border-skipped">Failed suite [Failed suite [Failed suite [Default suite]]]</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                    <span>testng-failed.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods,  10 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="hide-methods skipped suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]"> (hide)</a> <!-- hide-methods skipped suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]] -->
+                      <a href="#" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="show-methods skipped suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]"> (show)</a> <!-- show-methods skipped suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]] -->
+                    </span>
+                    <div class="method-list-content skipped suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="discoverPageOpenHose">discoverPageOpenHose</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="matchDataInPDPWithDiscovertab">matchDataInPDPWithDiscovertab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="newTagWithOpenHouseQuickSRP">newTagWithOpenHouseQuickSRP</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="searchStateNotChanged">searchStateNotChanged</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="swipeViewOpenHouse">swipeViewOpenHouse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="tagAndTimeVerifyInDiscover">tagAndTimeVerifyInDiscover</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="unauthenticatedUserOpenHouseVerify">unauthenticatedUserOpenHouseVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="updateOpenHouseListInDiscoverTab">updateOpenHouseListInDiscoverTab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="verifyFavIconDisappear">verifyFavIconDisappear</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" title="com.owners.OpenHouse.OpenHouseInSRP" hash-for-method="verifyFavIconInTiles">verifyFavIconInTiles</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]] -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+          <div class="suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.owners.OpenHouse.OpenHouseInSRP</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="discoverPageOpenHose">
+                  </a> <!-- discoverPageOpenHose -->
+                  <span class="method-name">discoverPageOpenHose</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="matchDataInPDPWithDiscovertab">
+                  </a> <!-- matchDataInPDPWithDiscovertab -->
+                  <span class="method-name">matchDataInPDPWithDiscovertab</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="newTagWithOpenHouseQuickSRP">
+                  </a> <!-- newTagWithOpenHouseQuickSRP -->
+                  <span class="method-name">newTagWithOpenHouseQuickSRP</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchStateNotChanged">
+                  </a> <!-- searchStateNotChanged -->
+                  <span class="method-name">searchStateNotChanged</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="swipeViewOpenHouse">
+                  </a> <!-- swipeViewOpenHouse -->
+                  <span class="method-name">swipeViewOpenHouse</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tagAndTimeVerifyInDiscover">
+                  </a> <!-- tagAndTimeVerifyInDiscover -->
+                  <span class="method-name">tagAndTimeVerifyInDiscover</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unauthenticatedUserOpenHouseVerify">
+                  </a> <!-- unauthenticatedUserOpenHouseVerify -->
+                  <span class="method-name">unauthenticatedUserOpenHouseVerify</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateOpenHouseListInDiscoverTab">
+                  </a> <!-- updateOpenHouseListInDiscoverTab -->
+                  <span class="method-name">updateOpenHouseListInDiscoverTab</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFavIconDisappear">
+                  </a> <!-- verifyFavIconDisappear -->
+                  <span class="method-name">verifyFavIconDisappear</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFavIconInTiles">
+                  </a> <!-- verifyFavIconInTiles -->
+                  <span class="method-name">verifyFavIconInTiles</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.owners.desiredCapabilities.forAndroidTab(desiredCapabilities.java:32)
+	at com.owners.OpenHouse.OpenHouseInSRP.beforeTest(OpenHouseInSRP.java:38)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ip-10-207-202-92.ec2.internal&apos;, ip: &apos;10.207.202.92&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 35 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused (Connection refused)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 49 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]-class-skipped -->
+        </div> <!-- panel Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]] -->
+        <div panel-name="test-xml-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/Jayabrata/Documents/workspace/mobile-automation/test-output/testng-failed.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Failed suite [Failed suite [Failed suite [Default suite]]]&quot;&gt;
+  &lt;test name=&quot;Default test(failed)(failed)(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.owners.OpenHouse.OpenHouseInSRP&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;discoverPageOpenHose&quot;/&gt;
+          &lt;include name=&quot;matchDataInPDPWithDiscovertab&quot;/&gt;
+          &lt;include name=&quot;updateOpenHouseListInDiscoverTab&quot;/&gt;
+          &lt;include name=&quot;afterTest&quot;/&gt;
+          &lt;include name=&quot;swipeViewOpenHouse&quot;/&gt;
+          &lt;include name=&quot;verifyFavIconInTiles&quot;/&gt;
+          &lt;include name=&quot;beforeTest&quot;/&gt;
+          &lt;include name=&quot;searchStateNotChanged&quot;/&gt;
+          &lt;include name=&quot;verifyFavIconDisappear&quot;/&gt;
+          &lt;include name=&quot;unauthenticatedUserOpenHouseVerify&quot;/&gt;
+          &lt;include name=&quot;newTagWithOpenHouseQuickSRP&quot;/&gt;
+          &lt;include name=&quot;tagAndTimeVerifyInDiscover&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.owners.OpenHouse.OpenHouseInSRP --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test(failed)(failed)(failed) --&gt;
+&lt;/suite&gt; &lt;!-- Failed suite [Failed suite [Failed suite [Default suite]]] --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Failed suite [Failed suite [Failed suite [Default suite]]]</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test(failed)(failed)(failed) (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Failed suite [Failed suite [Failed suite [Default suite]]]</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Failed suite [Failed suite [Failed suite [Default suite]]]</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]');
+function tableData_Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'discoverPageOpenHose')
+data.setCell(0, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(0, 3, 1);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'tagAndTimeVerifyInDiscover')
+data.setCell(1, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(1, 3, 0);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'unauthenticatedUserOpenHouseVerify')
+data.setCell(2, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'newTagWithOpenHouseQuickSRP')
+data.setCell(3, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'swipeViewOpenHouse')
+data.setCell(4, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'updateOpenHouseListInDiscoverTab')
+data.setCell(5, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyFavIconInTiles')
+data.setCell(6, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(6, 3, 0);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyFavIconDisappear')
+data.setCell(7, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(7, 3, 0);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'matchDataInPDPWithDiscovertab')
+data.setCell(8, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(8, 3, 0);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'searchStateNotChanged')
+data.setCell(9, 2, 'com.owners.OpenHouse.OpenHouseInSRP')
+data.setCell(9, 3, 0);
+window.suiteTableData['Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]']= { tableData: data, tableDiv: 'times-div-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 ms</span>
+              <div id="times-div-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]">
+              </div> <!-- times-div-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]] -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Failed suite [Failed suite [Failed suite [Default suite]]]</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">11 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.owners.OpenHouse.OpenHouseInSRP</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">saveOpenHouseFromPDP</span>
+                <br/>
+                <span class="ignored-method-name">addCalendarEventFromOpenHouse</span>
+                <br/>
+                <span class="ignored-method-name">deleteOpenHouseFromMenu</span>
+                <br/>
+                <span class="ignored-method-name">pinViewFromCluster</span>
+                <br/>
+                <span class="ignored-method-name">openHouseAddressVerify</span>
+                <br/>
+                <span class="ignored-method-name">scheduleTourFromOpenHouse</span>
+                <br/>
+                <span class="ignored-method-name">viewOpenHouseInMeSection</span>
+                <br/>
+                <span class="ignored-method-name">verifyOpenHousePropertyInSRP</span>
+                <br/>
+                <span class="ignored-method-name">copyAddressOptionVerify_PDPOpen</span>
+                <br/>
+                <span class="ignored-method-name">getDirectionFromOpenhouse</span>
+                <br/>
+                <span class="ignored-method-name">offlineMyOpenHouseSeciton</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Failed_suite_[Failed_suite_[Failed_suite_[Default_suite]]]" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.owners.OpenHouse.OpenHouseInSRP</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

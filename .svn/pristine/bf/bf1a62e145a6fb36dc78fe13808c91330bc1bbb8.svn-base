@@ -1,0 +1,85 @@
+package com.openhouse.PageFactory;
+
+import java.net.MalformedURLException;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.owners.commonFunctions;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class OpenHouseTimeFormat_PO {
+	static AndroidDriver<AndroidElement> driver;
+	WebElement element;
+	WebDriverWait wait;
+	commonFunctions cf = new commonFunctions();
+	public static By openTimeInSRP = By.id("com.owners.buyer:id/search_result_open_house_time");
+
+	public static String CurrentDateTimePST() {
+		DateFormat df = DateFormat.getDateTimeInstance(DateFormat.DATE_FIELD, DateFormat.MONTH_FIELD);
+		df.setTimeZone(TimeZone.getTimeZone("GMT-8:00"));
+		final String dateTimeString = df.format(new Date());
+		System.out.println(dateTimeString);
+		return dateTimeString;
+	}
+
+	public static void verifyDay(String day) {
+		Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("America/Los_Angeles"), Locale.US);
+		int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+		System.out.println(dayOfWeek);
+		switch (dayOfWeek) {
+		case 1:
+			if (dayOfWeek == 7)
+				System.out.println("Day is SUNDAY");
+			break;
+		case 2:
+			if (dayOfWeek == 1)
+				System.out.println("Day is MONDAY");
+			break;
+		case 3:
+			if (dayOfWeek == 2)
+				System.out.println("Day is TUESDAY");
+			break;
+		case 4:
+			if (dayOfWeek == 3)
+				System.out.println("Day is WEDNESDAY");
+			break;
+		case 5:
+			if (dayOfWeek == 4)
+				System.out.println("Day is THURSDAY");
+			break;
+		case 6:
+			if (dayOfWeek == 5)
+				System.out.println("Day is FRIDAY");
+			break;
+		case 7:
+			if (dayOfWeek == 6)
+				System.out.println("Day is SATURDAY");
+			break;
+		}
+
+	}
+
+	public static void dateExpirationValidation() throws MalformedURLException, InterruptedException {
+		// cf.verticalScrollUpwards(driver);
+		String srpDate = "SAT 9/2, 1PM"; // driver.findElement(openTimeInSRP).getText().toLowerCase();
+		String dateSRP = srpDate.substring(0, 3);
+		// System.out.println("Open House details in List SRP View: " +
+		// driver.findElement(openTimeInSRP).getText());
+		String PSTDate = CurrentDateTimePST();
+		verifyDay(dateSRP);
+
+	}
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		dateExpirationValidation();
+	}
+}
